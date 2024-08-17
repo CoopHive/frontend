@@ -15,7 +15,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: #0a1818;
-  background: linear-gradient(90deg, #F5E8E8, #F9F1F1);
+  background: linear-gradient(#F5E8E8, #F9F1F1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -69,6 +69,15 @@ button:focus-visible {
   }
 }
 
+.flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  backdrop-filter: blur(2.1vw);
+}
 
 .navlink {
   padding-right: 1.25rem;
@@ -81,16 +90,35 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  min-height: 825px;
 }
 
 .card {
-  width: 685px;
-  height: 425px;
-  background-color: rgba(0, 0, 0, 0.09);
+  width: 425px;
+  height: 261px;
+  background-color: rgba(0, 0, 0, 0.055);
+  backdrop-filter: blur(9px);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  margin: 1vh 1vw;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 38.2%;
+  width: 85.4%;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 61.8%;
+  width: 85.4%;
 }
