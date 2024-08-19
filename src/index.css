@@ -159,3 +159,16 @@ button:focus-visible {
   height: 61.8%;
   width: 85.4%;
 }
+
+.portrait-card {
+  width: 425px;
+  height: 685px;
+  background-color: rgba(0, 0, 0, 0.055);
+  backdrop-filter: blur(9px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 1vw 1vw;
+}
