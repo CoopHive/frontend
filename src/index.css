@@ -1,7 +1,28 @@
+
 @font-face{
-    font-family: "IBMPlexMono";
+    font-family: "IBMPlexMono-SemiBold";
+    src:local("IBMPlexMono-SemiBold"),
+    url('./assets/fonts/IBMPlexMono/IBMPlexMono-SemiBold.ttf') 
+}
+@font-face{
+    font-family: "IBMPlexMono-Italic";
+    src:local("IBMPlexMono-Italic"),
+    url('./assets/fonts/IBMPlexMono/IBMPlexMono-Italic.ttf') 
+}
+@font-face{
+    font-family: "IBMPlexMono-LightItalic";
+    src:local("IBMPlexMono-LightItalic"),
+    url('./assets/fonts/IBMPlexMono/IBMPlexMono-LightItalic.ttf') 
+}
+@font-face{
+    font-family: "IBMPlexMono-Regular";
     src:local("IBMPlexMono-Regular"),
     url('./assets/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf') 
+}
+@font-face{
+    font-family: "IBMPlexMono-Thin";
+    src:local("IBMPlexMono-Thin"),
+    url('./assets/fonts/IBMPlexMono/IBMPlexMono-Thin.ttf')
 }
 
 * {
@@ -10,7 +31,7 @@
 }
 
 :root {
-  font-family: IBMPlexMono, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: IBMPlexMono-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -33,8 +54,11 @@ a:hover {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: IBMPlexMono-Italic, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-family: IBMPlexMono-LightItalic, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 button {
@@ -69,6 +93,13 @@ button:focus-visible {
   }
 }
 
+.background-pane {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 0px 3vh 3vh #F5E8E8 inset;
+}
+
 .flex-row-wrap {
   display: flex;
   flex-direction: row;
@@ -90,7 +121,13 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  min-height: 825px;
+  min-height: 875px;
+}
+
+.card-container {
+  justify-content: center;
+  width: 94.4vw;
+  flex-shrink: 0;
 }
 
 .card {
@@ -103,7 +140,7 @@ button:focus-visible {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1vh 1vw;
+  margin: 1vw 1vw;
 }
 
 .card-title {

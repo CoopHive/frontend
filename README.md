@@ -1,5 +1,12 @@
 # React + TypeScript + Vite
 
+- border frames
+- opacity behind each card, or even flex gap
+- font party
+- lessen titles on wide frames
+
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

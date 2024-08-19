@@ -1,17 +1,16 @@
+
 import Background from '@/assets/about-background.png'
 import Background2 from '@/assets/bee-theif.png' 
 import Background3 from '@/assets/about-background-2.png'
-export const  Home  = () => {
+export const  About  = () => {
 
   return (<>
     <div
       className="pane background-pane"
       style={{
         backgroundImage: `url(${Background})`,
-        justifyContent: 'center',
-
       }}>
-      <h1 style={{fontSize: '5.5vw'}}>Coophive.network</h1>
+      <h1 style={{fontSize: '9.0vw'}}>Coophive.network</h1>
       <h2 style={{fontSize: '3.4vw', textAlign: 'center'}}>Empowering DePin with EAS Composables</h2>
     </div>
     <div
@@ -20,13 +19,14 @@ export const  Home  = () => {
         backgroundImage: `url(${Background2})`,
       }}
     >
-      <h1 className="flex-row-wrap" style={{
-      alignItems: 'center',
-      fontSize: '5.5vw',
-      textAlign: 'center'}}>About</h1>
+      <h2 className="flex-row-wrap" style={{ alignItems: 'center', height: '23vw', fontSize: '5.5vw', textAlign: 'center'}}>About</h2>
       <div
-        className="flex-row-wrap card-container"
-       >
+        className="flex-row-wrap"
+      style={{
+        justifyContent: 'center',
+        width: '94.4vw',
+        flexShrink: 0,
+        }}>
         <div className="card">
           <h2 className="card-title">End Cloud Monopolist Vendor Lock in</h2>
           <p className="card-content">Coophive tooling enables bringing your tech stack off the cloud and onto the edge</p>
@@ -46,15 +46,13 @@ export const  Home  = () => {
         style={{
           backgroundImage: `url(${Background3})`,
       }}>
-        <h1 className="flex-row-wrap"
-        style={{
-          alignItems: 'center',
-          fontSize: '5.5vw',
-          textAlign: 'center'
-      }}>Partnerships</h1>
+        <h2 className="flex-row-wrap" style={{ alignItems: 'center', height: '23vw', fontSize: '5.5vw', textAlign: 'center'}}>Partnerships</h2>
         <div 
-          className="flex-row-wrap card-container"
-          >
+          className="flex-row-wrap"
+          style={{
+          justifyContent: 'space-around',
+          width: '94.4vw',
+          }}>
         <div className="card">
           <h2 className="card-title">Protocol Labs</h2>
           <p className="card-content">The future of computing is on the edge</p>
