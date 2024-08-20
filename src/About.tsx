@@ -65,7 +65,7 @@ const teamPortraitData = [
   },
   {
     name: 'Matteo Manzi',
-    title: 'R&D',
+    title: 'Senior Quantitative Researcher',
     image: Matteo,
     bio: 'Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network'
   }
