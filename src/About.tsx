@@ -10,11 +10,12 @@ import Aayushi from '@/assets/portraits/aayushi_jain.jpeg'
 import Taylor from '@/assets/portraits/taylor_hulsmans.jpg'
 import Vardhan from '@/assets/portraits/vardhan_shorewala.jpeg'
 import Pratham from '@/assets/portraits/pratham_dave.jpeg'
+import Matteo from '@/assets/portraits/matteo.jpeg'
 
 import Kai from '@/assets/portraits/kai_davenport.jpeg'
 import Luke from '@/assets/portraits/luke_marsden.jpeg'
 import David from '@/assets/portraits/aronchick.jpeg'
-import Chris from '@/assets/portraits/chris_hill.jpeg'
+import Chris from '@/assets/portraits/chris-hill.jpeg'
 import Michael from '@/assets/portraits/michael_zargham.jpg'
 
 import { Link } from 'react-router-dom'
@@ -61,6 +62,12 @@ const teamPortraitData = [
     title: 'R&D',
     image: Pratham,
     bio: 'CS and Math @ Cornell, 2027'
+  },
+  {
+    name: 'Matteo Manzi',
+    title: 'R&D',
+    image: Matteo,
+    bio: 'Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network'
   }
 ]
 
@@ -106,7 +113,26 @@ export const  About  = () => {
       style={{
         backgroundImage: `url(${Background})`,
       }}>
-      <h1 style={{fontSize: '5.5vw'}}>Our Mission</h1>
+      <h2 className="flex-row-wrap" style={{
+      alignItems: 'center',
+      fontSize: '5.5vw',
+      textAlign: 'center'}}>Our Mission</h2>
+      <div
+        className="flex-row-wrap card-container"
+       >
+        <div className="card">
+          <h2 className="card-title">Unlocking Latent Computing Resources</h2>
+          <p className="card-content">The world is short on computing resources, yet much is underutilized.  Coophive is united in the vision of unlocking Latent Computing Resources</p>
+        </div>
+        <div className="card">
+          <h2 className="card-title">Cryptographic incentivization of edge compute</h2>
+          <p className="card-content">data and compute monopolies are price gouging projects for little reason other than the inability to economically coordinate edge resources </p>
+        </div>
+        <div className="card">
+          <h2 className="card-title">FAIR data and economic attribution</h2>
+          <p className="card-content">Today everyone is a knowledge worker, but without adequate compensation the line between servant and employee is blurry.  Coophive hopes to return fair wages to data economies through FAIR data and economic attribution</p>
+        </div>
+      </div>
     </div>
     <div
       className="pane background-pane"
@@ -114,11 +140,14 @@ export const  About  = () => {
         backgroundImage: `url(${Background2})`,
       }}
     >
-      <h2 className="flex-row-wrap" style={{ alignItems: 'center', height: '23vw', fontSize: '5.5vw', textAlign: 'center'}}>About</h2>
+      <h2 className="flex-row-wrap" style={{ alignItems: 'center', height: '23vw', fontSize: '5.5vw', textAlign: 'center'}}>Our Team</h2>
       <div
         className="flex-row-wrap"
         style={{
           justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          height: '100%',
         }}
       >{
         teamPortraitData.map((portrait, i) => {
@@ -135,11 +164,33 @@ export const  About  = () => {
                   maxHeight: '100%',
                 }}
               src={portrait.image} alt={portrait.name} />
-              <p style={{width: '400px'}}>{portrait.bio}</p>
+              <h2>{portrait.title}</h2>
+              <p style={{width: '400px', padding:'2vh, 0vw' }}>{portrait.bio}</p>
             </div>
           )
         })
         }
+        <h2 className="flex-row-wrap" style={{ justifyContent: 'center', alignItems: 'center', width: '100vw',  fontSize: '5.5vw', textAlign: 'center'}}>Advisors</h2>
+
+      { advisorPortraitData.map((portrait, i) => {
+        return (
+          <div key={i+"portrait"} className="portrait-card">
+            <h2
+              style={{
+                padding: '1vh 1vw'
+              }}
+            >{portrait.name}</h2>
+            <img 
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+              }}
+            src={portrait.image} alt={portrait.name} />
+            <h2>{portrait.title}</h2>
+            <p style={{width: '400px', padding:'2vh, 0vw' }}>{portrait.bio}</p>
+          </div>
+        )
+      })}
       </div>
     </div>
     <div
