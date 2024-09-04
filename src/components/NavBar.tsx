@@ -46,7 +46,7 @@ export const NavBar = () => {
           </a>
           <a
             target="_blank"
-            href="https://docs.co-ophive.network/coophive/whitepaper"
+            href="https://alkahest.coophive.network/whitepaper"
             className="navlink"
           >
             Whitepaper
@@ -58,7 +58,10 @@ export const NavBar = () => {
           >
             Discord
           </a>
-          <a target="_blank" href="https://x.com/CoopHive" className="navlink">
+          <a 
+            target="_blank" 
+            href="https://x.com/CoopHive" 
+            className="navlink">
             Twitter
           </a>
         </div>
