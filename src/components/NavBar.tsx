@@ -46,7 +46,7 @@ export const NavBar = () => {
           </a>
           <a
             target="_blank"
-            href="https://docs.co-ophive.network/coophive/whitepaper"
+            href="https://alkahest.coophive.network/Whitepaper.html"
             className="navlink"
           >
             Whitepaper
