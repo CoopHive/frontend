@@ -4,7 +4,6 @@ import Background2 from '@/assets/bee-theif.png'
 import Background3 from '@/assets/about-background-2.png'
 
 import Levi from '@/assets/portraits/levi.jpg'
-import Vlad from '@/assets/portraits/vlad_radu.jpeg'
 import Yang from '@/assets/portraits/yang_zheng_cropped.jpg'
 import Aayushi from '@/assets/portraits/aayushi_jain.jpeg'
 import Taylor from '@/assets/portraits/taylor_hulsmans.jpg'
@@ -28,77 +27,66 @@ const teamPortraitData = [
     bio: 'Levi has been working in the intersection of mechanism design and distributed computing since 2017. Most recently he was at Protocol Labs, conducting research on game-theoretic verifiable computing, and autonomous agents for pricing and scheduling in distributed computing networks.'
   },
   {
-    name: 'Vlad Radu',
-    title: 'VP Engineering',
-    image: Vlad,
-    bio: 'PhD in Wireless Network Sensors @  University Politehnica of Bucharest, 2026 \n Prev at GoPro, Ethernity Cloud, Antler Interactive, Xperi Corporation, Human, Vartos, Luxoft, NXP Semiconductors'
-  },
-  {
     name: 'Yang Zheng',
-    title: 'Software Architect',
+    title: 'Architect',
     image: Yang,
     bio: 'Prev mmon Co., Mana Finance Co., Matrix Inc.,',
   },
   {
-    name: 'Aayushi Jain',
-    title: 'R&D',
-    image: Aayushi,
-    bio: 'EECS @ UC Berkeley, 2025 \n Machine Learning Research Apprentice - Squishy Robotics \n Cybersecurity Intern - Deloitte'
-  },
-  {
     name: 'Taylor Hulsmans',
-    title: 'Senior Software Engineer',
+    title: 'Engineer',
     image: Taylor,
     bio: 'Prev at Molecule, Sigmadex, HedgeTrade \n OSS contributor @ IPFS, Filecoin, various DeSci projects'
   },
   {
+    name: 'Matteo Manzi',
+    title: 'Researcher',
+    image: Matteo,
+    bio: 'Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network'
+  },
+  {
+    name: 'Aayushi Jain',
+    title: 'Software Engineering Intern',
+    image: Aayushi,
+    bio: 'EECS @ UC Berkeley, 2025 \n Machine Learning Research Apprentice - Squishy Robotics \n Cybersecurity Intern - Deloitte'
+  },
+  {
     name: 'Vardhan Shorewala',
-    title: 'R&D',
+    title: 'Software Engineering Intern',
     image: Vardhan,
     bio: 'EECS and Business Administration @ UC Berkeley, 2026 \n Amazon, IEEE, UCSF/LBNL'
   },
   {
     name: 'Pratham Dave',
-    title: 'R&D',
+    title: 'Software Engineering Intern',
     image: Pratham,
     bio: 'CS and Math @ Cornell, 2027'
   },
-  {
-    name: 'Matteo Manzi',
-    title: 'Senior Quantitative Researcher',
-    image: Matteo,
-    bio: 'Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network'
-  }
 ]
 
 const advisorPortraitData = [
   {
     name: 'Kai Davenport',
-    title: 'Advisor',
     image: Kai,
     bio: 'Architect for Bacalhau and Project Bravo, Protocol Labs \n Tech Lead, Momentum \n Mythical 10x engineer in the flesh'
   },
   {
     name: 'Luke Marsden',
-    title: 'Advisor',
     image: Luke,
     bio: 'CEO, helix.ml \n Tech Lead for Bacalhau and Project Bravo, Protocol Labs \n Founder, MLOps Consulting \n Early Docker API'
   },
   {
     name: 'David Aronchick',
-    title: 'Advisor',
     image: David,
     bio: 'Co-founder and CEO, Expanso \n Head of Compute Over Data and Bacalhau, Protocol Labs \n Kubernetes’ first non-founding product manager \n Google, Microsoft'
   },
   {
     name: 'Chris Hill',
-    title: 'Advisor',
     image: Chris,
     bio: 'Co-founder, DeSci Labs'
   },
   {
     name: 'Michael Zargham',
-    title: 'Advisor',
     image: Michael,
     bio: 'Founder and CEO, BlockScience'
   }
@@ -116,22 +104,22 @@ export const  About  = () => {
       <h2 className="flex-row-wrap" style={{
       alignItems: 'center',
       fontSize: '5.5vw',
-      textAlign: 'center'}}>Our Mission</h2>
+      textAlign: 'center'}}>Mission</h2>
       <div
         className="flex-row-wrap card-container"
        >
         <div className="card">
-          <h2 className="card-title">Unlocking Latent Computing Resources</h2>
-          <p className="card-content">The world is short on computing resources, yet much is underutilized.  Coophive is united in the vision of unlocking Latent Computing Resources</p>
+          <h2 className="card-title">Economic Empowerment through Agentic Representation</h2>
+          <p className="card-content">Autonomous agents will soon be representing our interests and engaging in economic activity on our behalves. CoopHive empowers these agents by providing a platform where they can learn from, and cooperate with, each other.</p>
         </div>
         <div className="card">
-          <h2 className="card-title">Cryptographic incentivization of edge compute</h2>
-          <p className="card-content">data and compute monopolies are price gouging projects for little reason other than the inability to economically coordinate edge resources </p>
-        </div>
+          <h2 className="card-title">Marketplaces As Public Goods</h2>
+          <p className="card-content">Token-agnostic, no-fee marketplaces. </p>
+        </div> 
         <div className="card">
-          <h2 className="card-title">FAIR data and economic attribution</h2>
-          <p className="card-content">Today everyone is a knowledge worker, but without adequate compensation the line between servant and employee is blurry.  Coophive hopes to return fair wages to data economies through FAIR data and economic attribution</p>
-        </div>
+          <h2 className="card-title">Tokenization of Idle Computing Power</h2>
+          <p className="card-content">Hardware is underutilized all around the world. The space of potentially valuable computations is infinite. CoopHive connects the dots by putting otherwise wasted resources to good use.</p>
+        </div> 
       </div>
     </div>
     <div
@@ -140,7 +128,7 @@ export const  About  = () => {
         backgroundImage: `url(${Background2})`,
       }}
     >
-      <h2 className="flex-row-wrap" style={{ alignItems: 'center', height: '23vw', fontSize: '5.5vw', textAlign: 'center'}}>Our Team</h2>
+      <h2 className="flex-row-wrap" style={{ alignItems: 'center', height: '23vw', fontSize: '5.5vw', textAlign: 'center'}}>Team</h2>
       <div
         className="flex-row-wrap"
         style={{

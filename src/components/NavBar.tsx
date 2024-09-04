@@ -31,9 +31,10 @@ export const NavBar = () => {
           style={{alignItems:'center'}}>
           <Link to="/about" className="navlink">About</Link>
           <a target="_blank" href="https://github.com/coophive" className="navlink">Github</a>
-          <a target="_blank" href="https://x.com/CoopHive" className="navlink">Twitter</a>
-          <a target="_blank" href="https://discord.gg/MRMwcK7Uxy" className="navlink">Discord</a>
           <a target="_blank" href="https://docs.co-ophive.network" className="navlink">Docs</a>
+          <a target="_blank" href="https://docs.co-ophive.network/coophive/whitepaper" className="navlink">Whitepaper</a>
+          <a target="_blank" href="https://discord.gg/b4XpHz6N73" className="navlink">Discord</a>
+          <a target="_blank" href="https://x.com/CoopHive" className="navlink">Twitter</a>
         </div>
       </div>
     </div>

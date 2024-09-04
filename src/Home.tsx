@@ -1,6 +1,11 @@
 import Background from '@/assets/about-background.png'
 import Background2 from '@/assets/bee-theif.png' 
 import Background3 from '@/assets/about-background-2.png'
+
+import protocolLabsImage from '@/assets/protocol_labs_transparent_background.png';
+import berkeleyImage from '@/assets/berkeley_blockchain_xcelerator_2_background_removed_cropped_resized.png';
+import orangeDaoImage from '@/assets/orange_dao_background_removed.png';
+
 export const  Home  = () => {
 
   return (<>
@@ -11,8 +16,8 @@ export const  Home  = () => {
         justifyContent: 'center',
 
       }}>
-      <h1 style={{fontSize: '5.5vw'}}>Coophive.network</h1>
-      <h2 style={{fontSize: '3.4vw', textAlign: 'center'}}>Empowering DePin with EAS Composables</h2>
+      <h1 style={{fontSize: '5.5vw'}}>CoopHive</h1>
+      <h2 style={{fontSize: '3.4vw', textAlign: 'center'}}>Like Amazon, but for Autonomous Agents</h2>
     </div>
     <div
       className="pane background-pane"
@@ -23,23 +28,35 @@ export const  Home  = () => {
       <h1 className="flex-row-wrap" style={{
       alignItems: 'center',
       fontSize: '5.5vw',
-      textAlign: 'center'}}>About</h1>
+      textAlign: 'center'}}>What Are We Building?</h1>
       <div
         className="flex-row-wrap card-container"
        >
         <div className="card">
-          <h2 className="card-title">End Cloud Monopolist Vendor Lock in</h2>
-          <p className="card-content">Coophive tooling enables bringing your tech stack off the cloud and onto the edge</p>
+          <h2 className="card-title">Primitives</h2>
+          <p className="card-content">Building blocks to create marketplaces that machines need to meet the demands of future economic activity.</p>
         </div>
         <div className="card">
-          <h2 className="card-title">Focii for Compute Resources</h2>
-          <p className="card-content">Storage, Bandwith and Processing marketplaces are heterogenous and fragmented- with EAS Attestation chaining, we can link and exchange them together pragmatically</p>
+          <h2 className="card-title">Composable Marketplaces</h2>
+          <p className="card-content">With CoopHive, fragmented marketplaces like compute, storage, and bandwidth can be composed seamlessly. And that's only the beginning.</p>
         </div>
         <div className="card">
-          <h2 className="card-title">Enhancing Verifiability</h2>
-          <p className="card-content">There isno silver bullet for computational verification- through EAS Isomorphism, we gain access to an entire ecosystem of verification resources</p>
+          <h2 className="card-title">Multi-Agent Systems</h2>
+          <p className="card-content">Autonomous agents are on the rise, and out of their interactions and compositions will emerge the next revolution in economic exchange.</p>
         </div>
       </div>
+    </div>
+    <div className="pane" style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center' }}>
+      <h1 style={{ textAlign: 'center', fontSize: '5.5vw' }}>Why Are We Building It?</h1>    <div className="section-content" style={{ maxWidth: '1000px', margin: '0 auto', fontSize: '2em' }}>
+        <p>Autonomous agents are just beginning to trade simple assets like stocks or ETH. In the future, everyone will have an AI agent negotiating on their behalf, trading with other agents, buying and selling data, compute, and everyday items to meet their personal financial goals.</p>
+        <p>CoopHive is building the only platform that lets agents barter and exchange complex combinations of goods and services on behalf of their owners.</p>
+        <p>We are starting with buying and selling compute in a distributed network. We will expand to storage, bandwidth, verifiable computing, off-chain compute jobs from smart contracts, RWA marketplaces, tokenization of latent computing power, bridging, and much more.</p>
+        <p>In the future, CoopHive will be the new Amazon that lets any agent exchange goods and services to maximize the utility of the owners they represent.</p>
+    </div>
     </div>
     <div
       className="pane background-pane"
@@ -51,21 +68,24 @@ export const  Home  = () => {
           alignItems: 'center',
           fontSize: '5.5vw',
           textAlign: 'center'
-      }}>Partnerships</h1>
+      }}>Backed By</h1>
         <div 
           className="flex-row-wrap card-container"
           >
         <div className="card">
-          <h2 className="card-title">Protocol Labs</h2>
-          <p className="card-content">The future of computing is on the edge</p>
+          <img src={protocolLabsImage} alt="Protocol Labs" />
+          <h2 className="card-title" style={{ fontSize: '3em' }}>Incubation</h2>
+          <p className="card-content"></p>
         </div>
         <div className="card">
-          <h2 className="card-title">Berkeley Blockchain Accelerator</h2>
-          <p className="card-content">The future of computing is on the edge</p>
+          <img src={berkeleyImage} alt="Berkeley Blockchain Xcelerator" />
+          <h2 className="card-title" style={{ fontSize: '3em' }}>2024 Cohort</h2>
+          <p className="card-content"></p>
         </div>
         <div className="card">
-          <h2 className="card-title">Orange DAO</h2>
-          <p className="card-content">The future of computing is on the edge</p>
+          <img src={orangeDaoImage} alt="Orange DAO" />
+          <h2 className="card-title" style={{ fontSize: '3em' }}>Summer 2024 Fellowship</h2>
+          <p className="card-content"></p>
         </div>
       </div>
     </div>
