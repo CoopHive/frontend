@@ -4,9 +4,6 @@ on:
   push:
     branches:
     - default
-  pull_request:
-    branches:
-    - default
 
 jobs:
   build-and-deploy:
