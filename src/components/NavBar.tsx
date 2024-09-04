@@ -35,11 +35,11 @@ export const NavBar = () => {
             href="https://github.com/coophive"
             className="navlink"
           >
-            Github
+            GitHub
           </a>
           <a
             target="_blank"
-            href="https://docs.co-ophive.network"
+            href="https://alkahest.coophive.network"
             className="navlink"
           >
             Docs

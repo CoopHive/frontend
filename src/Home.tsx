@@ -90,12 +90,11 @@ export const Home = () => {
           className="section-content"
           style={{
             maxWidth: "1000px",
-            margin: "0 auto",
-            fontSize: "2em",
+            fontSize: "1.5em",
             marginTop: "5vw",
             backgroundColor: "rgba(0, 0, 0, 0.055)",
             backdropFilter: "blur(9px)",
-            borderRadius: "8px",
+            padding: "1vw",
           }}
         >
           <p>

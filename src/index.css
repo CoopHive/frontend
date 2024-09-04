@@ -137,7 +137,6 @@ button:focus-visible {
   height: 261px;
   background-color: rgba(0, 0, 0, 0.055);
   backdrop-filter: blur(9px);
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
