@@ -62,9 +62,8 @@ export const Home = () => {
           <div className="card">
             <h2 className="card-title">Multi-Agent Systems</h2>
             <p className="card-content">
-              Autonomous agents are on the rise, and out of their interactions
-              and compositions will emerge the next revolution in economic
-              exchange.
+              Autonomous agents are on the rise. The symphony of their interactions
+              will usher in the next revolution in economics.
             </p>
           </div>
         </div>
@@ -113,7 +112,7 @@ export const Home = () => {
             We are starting with buying and selling compute in a distributed
             network. We will expand to storage, bandwidth, verifiable computing,
             off-chain compute jobs from smart contracts, RWA marketplaces,
-            tokenization of latent computing power, bridging, and much more.
+            tokenization of latent computing power, bridging, energy, and more.
           </p>
           <p>
             In the future, CoopHive will be the new Amazon that lets any agent
@@ -153,7 +152,7 @@ export const Home = () => {
             CoopHive is currently in development. 
           </p>
           <p>
-            You can test out a proof-of-concept of a distributed computing network built on a previous version of the protocol
+            You can test out a proof-of-concept of a distributed computing network built on the previous version of the protocol
             <a
               target="_blank"
               href="https://github.com/CoopHive/dcn"
@@ -165,7 +164,7 @@ export const Home = () => {
             .
             </p>
             <p>
-            To try out the latest version of our protocol,
+            To try out the latest proof-of-concept,
             <a
               target="_blank"
               href="https://alkahest.coophive.network/"
