@@ -80,6 +80,7 @@ const teamPortraitData = [
 const advisorPortraitData = [
   {
     name: "Kai Davenport",
+    title: "Advisor",
     image: Kai,
     bio: <>
       Architect for Bacalhau and Project Bravo @ Protocol Labs <br />
@@ -89,6 +90,7 @@ const advisorPortraitData = [
   },
   {
     name: "Luke Marsden",
+    title: "Advisor",
     image: Luke,
     bio: <>
       CEO, helix.ml <br />
@@ -99,6 +101,7 @@ const advisorPortraitData = [
   },
   {
     name: "David Aronchick",
+    title: "Advisor",
     image: David,
     bio: <>
       Co-founder and CEO, Expanso <br />
@@ -109,11 +112,13 @@ const advisorPortraitData = [
   },
   {
     name: "Chris Hill",
+    title: "Advisor",
     image: Chris,
     bio: "Co-founder, DeSci Labs",
   },
   {
     name: "Michael Zargham",
+    title: "Advisor",
     image: Michael,
     bio: "Founder and CEO, BlockScience",
   },
