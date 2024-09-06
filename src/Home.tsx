@@ -136,6 +136,62 @@ export const Home = () => {
             textAlign: "center",
           }}
         >
+          Want to Try?
+        </h1>
+        <div
+          className="section-content"
+          style={{
+            maxWidth: "1000px",
+            fontSize: "1.5em",
+            marginTop: "5vw",
+            backgroundColor: "rgba(0, 0, 0, 0.055)",
+            backdropFilter: "blur(9px)",
+            padding: "1vw",
+          }}
+        >
+          <p>
+            CoopHive is currently in development. 
+          </p>
+          <p>
+            You can test out a proof-of-concept of a distributed computing network built on a previous version of the protocol
+            <a
+              target="_blank"
+              href="https://github.com/CoopHive/dcn"
+              className="navlink"
+              style={{ textDecoration: 'underline', marginLeft: '13px', marginRight: '-20px' }}
+            >
+              here
+            </a>
+            .
+            </p>
+            <p>
+            To try out the latest version of our protocol,
+            <a
+              target="_blank"
+              href="https://alkahest.coophive.network/"
+              className="navlink"
+              style={{ textDecoration: 'underline',  marginLeft: '13px', marginRight: '-20px' }}
+            >
+              please see our docs
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+      <div
+        className="pane background-pane"
+        style={{
+          backgroundImage: `url(${Background3})`,
+        }}
+      >
+        <h1
+          className=""
+          style={{
+            alignItems: "center",
+            fontSize: "5.5vw",
+            textAlign: "center",
+          }}
+        >
           Backed By
         </h1>
         <div
