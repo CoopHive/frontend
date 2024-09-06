@@ -23,43 +23,57 @@ const teamPortraitData = [
     name: "Levi Rybalov",
     title: "Founder",
     image: Levi,
-    bio: "Levi has been working in the intersection of mechanism design and distributed computing since 2017. Most recently he was at Protocol Labs, conducting research on game-theoretic verifiable computing, and autonomous agents for pricing and scheduling in distributed computing networks.",
+    bio: <>
+      Levi works on mechanism design, distributed computing, verifiable computing, and multi-agent systems. Before founding CoopHive, he was at Protocol Labs researching the intersection of game theory and distributed computing networks.
+    </>,
   },
   {
     name: "Yang Zheng",
     title: "Architect",
     image: Yang,
-    bio: "Prev mmon Co., Mana Finance Co., Matrix Inc.,",
+    bio: <>
+      Prev mmon Co., Mana Finance Co., Matrix Inc.,
+    </>,
   },
   {
     name: "Taylor Hulsmans",
     title: "Engineer",
     image: Taylor,
-    bio: "Prev at Molecule, Sigmadex, HedgeTrade \n OSS contributor @ IPFS, Filecoin, various DeSci projects",
+    bio: <>
+      Prev at Molecule, Sigmadex, HedgeTrade <br /> OSS contributor @ IPFS, Filecoin, various DeSci projects
+    </>,
   },
   {
     name: "Matteo Manzi",
     title: "Researcher",
     image: Matteo,
-    bio: "Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network",
+    bio: <>
+      Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network
+    </>,
   },
   {
     name: "Aayushi Jain",
     title: "Software Engineering Intern",
     image: Aayushi,
-    bio: "EECS @ UC Berkeley, 2025 \n Machine Learning Research Apprentice - Squishy Robotics \n Cybersecurity Intern - Deloitte",
+    bio: <>
+      EECS @ UC Berkeley, 2025 <br /> Machine Learning Research Apprentice - Squishy Robotics <br /> Cybersecurity Intern - Deloitte
+    </>,
   },
   {
     name: "Vardhan Shorewala",
     title: "Software Engineering Intern",
     image: Vardhan,
-    bio: "EECS and Business Administration @ UC Berkeley, 2026 \n Amazon, IEEE, UCSF/LBNL",
+    bio: <>
+      EECS and Business Administration @ UC Berkeley, 2026 <br /> Amazon, IEEE, UCSF/LBNL
+    </>,
   },
   {
     name: "Pratham Dave",
     title: "Software Engineering Intern",
     image: Pratham,
-    bio: "CS and Math @ Cornell, 2027",
+    bio: <>
+      CS and Math @ Cornell, 2027
+    </>,
   },
 ];
 
@@ -67,17 +81,31 @@ const advisorPortraitData = [
   {
     name: "Kai Davenport",
     image: Kai,
-    bio: "Architect for Bacalhau and Project Bravo, Protocol Labs \n Tech Lead, Momentum \n Mythical 10x engineer in the flesh",
+    bio: <>
+      Architect for Bacalhau and Project Bravo @ Protocol Labs <br />
+      Tech Lead, Momentum <br />
+      Mythical 10x engineer in the flesh
+    </>,
   },
   {
     name: "Luke Marsden",
     image: Luke,
-    bio: "CEO, helix.ml \n Tech Lead for Bacalhau and Project Bravo, Protocol Labs \n Founder, MLOps Consulting \n Early Docker API",
+    bio: <>
+      CEO, helix.ml <br />
+      Tech Lead for Bacalhau and Project Bravo @ Protocol Labs <br />
+      Founder, MLOps Consulting <br />
+      Early Docker API
+    </>,
   },
   {
     name: "David Aronchick",
     image: David,
-    bio: "Co-founder and CEO, Expanso \n Head of Compute Over Data and Bacalhau, Protocol Labs \n Kubernetes’ first non-founding product manager \n Google, Microsoft",
+    bio: <>
+      Co-founder and CEO, Expanso <br />
+      Head of Compute Over Data and Bacalhau @ Protocol Labs <br />
+      Kubernetes’ first non-founding product manager <br />
+      Google, Microsoft
+    </>,
   },
   {
     name: "Chris Hill",
