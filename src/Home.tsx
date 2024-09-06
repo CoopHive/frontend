@@ -44,29 +44,29 @@ export const Home = () => {
           className="flex-row-wrap card-container"
           style={{ marginTop: "5vw" }}
         >
-          <div className="card">
-            <h2 className="card-title">Primitives</h2>
-            <p className="card-content">
-              Building blocks to create marketplaces that machines need to meet
-              the demands of future economic activity.
-            </p>
+            <div className="card">
+              <h2 className="card-title">Primitives</h2>
+              <p className="card-content" style={{  paddingTop: "20px", marginTop: "-50px" }}>
+                Building blocks to create marketplaces that machines need to meet
+                the demands of future economic activity.
+              </p>
+            </div>
+            <div className="card">
+              <h2 className="card-title">Composable Marketplaces</h2>
+              <p className="card-content" style={{ paddingTop: "20px", marginTop: "-46px" }}>
+                With CoopHive, fragmented marketplaces like compute, storage, and
+                bandwidth can be composed seamlessly. And that's only the
+                beginning.
+              </p>
+            </div>
+            <div className="card">
+              <h2 className="card-title">Multi-Agent Systems</h2>
+              <p className="card-content" style={{ paddingTop: "20px", marginTop: "-50px" }}>
+                Autonomous agents are on the rise. The symphony of their interactions
+                will usher in the next revolution in economics.
+              </p>
+            </div>
           </div>
-          <div className="card">
-            <h2 className="card-title">Composable Marketplaces</h2>
-            <p className="card-content">
-              With CoopHive, fragmented marketplaces like compute, storage, and
-              bandwidth can be composed seamlessly. And that's only the
-              beginning.
-            </p>
-          </div>
-          <div className="card">
-            <h2 className="card-title">Multi-Agent Systems</h2>
-            <p className="card-content">
-              Autonomous agents are on the rise. The symphony of their interactions
-              will usher in the next revolution in economics.
-            </p>
-          </div>
-        </div>
       </div>
 
       <div

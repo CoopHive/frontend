@@ -156,7 +156,7 @@ export const About = () => {
           </div>
           <div className="card">
             <h2 className="card-title">Neutral Marketplaces</h2>
-            <p className="card-content">
+            <p className="card-content" style={{ marginBottom: "64px", marginTop: "-50px" }}>
               Token-agnostic, no-fee marketplaces.{" "}
             </p>
           </div>
