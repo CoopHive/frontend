@@ -141,17 +141,16 @@ export const About = () => {
         <div className="flex-row-wrap card-container">
           <div className="card">
             <h2 className="card-title">
-              Economic Empowerment through Agentic Representation
+              Economic Empowerment via Agentic Representation
             </h2>
             <p className="card-content">
-              Autonomous agents will soon be representing our interests and
-              engaging in economic activity on our behalves. CoopHive empowers
-              these agents by providing a platform where they can learn from,
-              and cooperate with, each other.
+              Autonomous agents will soon be engaging in economic activity on your behalf. 
+              CoopHive empowers your agents by providing a platform where they can learn from,
+              and cooperate with, other agents.
             </p>
           </div>
           <div className="card">
-            <h2 className="card-title">Marketplaces As Public Goods</h2>
+            <h2 className="card-title">Neutral Marketplaces</h2>
             <p className="card-content">
               Token-agnostic, no-fee marketplaces.{" "}
             </p>
@@ -160,8 +159,8 @@ export const About = () => {
             <h2 className="card-title">Tokenization of Idle Computing Power</h2>
             <p className="card-content">
               Hardware is underutilized all around the world. The space of
-              potentially valuable computations is infinite. CoopHive connects
-              the dots by putting otherwise wasted resources to good use.
+              potentially valuable computations is infinite. CoopHive turns 
+              trash into treasure by putting otherwise wasted resources to good use.
             </p>
           </div>
         </div>
