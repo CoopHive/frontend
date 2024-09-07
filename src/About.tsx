@@ -40,7 +40,8 @@ const teamPortraitData = [
     title: "Engineer",
     image: Taylor,
     bio: <>
-      Prev at Molecule, Sigmadex, HedgeTrade <br /> OSS contributor @ IPFS, Filecoin, various DeSci projects
+      Prev at Molecule, Sigmadex, HedgeTrade <br /> 
+      OSS contributor @ IPFS, Filecoin, various DeSci projects
     </>,
   },
   {
@@ -56,7 +57,8 @@ const teamPortraitData = [
     title: "Software Engineering Intern",
     image: Aayushi,
     bio: <>
-      EECS @ UC Berkeley, 2025 <br /> Machine Learning Research Apprentice - Squishy Robotics <br /> Cybersecurity Intern - Deloitte
+      EECS @ UC Berkeley, 2024 <br />
+      Coinbase, Deloitte, Squishy Robotics
     </>,
   },
   {
@@ -64,7 +66,8 @@ const teamPortraitData = [
     title: "Software Engineering Intern",
     image: Vardhan,
     bio: <>
-      EECS and Business Administration @ UC Berkeley, 2026 <br /> Amazon, IEEE, UCSF/LBNL
+      EECS and Business Administration @ UC Berkeley, 2026 <br /> 
+      Amazon, IEEE, UCSF/LBNL
     </>,
   },
   {
