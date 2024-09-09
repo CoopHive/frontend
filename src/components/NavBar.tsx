@@ -1,6 +1,24 @@
 import Logo from "@/assets/coophive-logo-greyscale.png";
 import { Link } from "react-router-dom";
+import  Select from 'react-dropdown-select';
+
 export const NavBar = () => {
+  const options =  [
+    {
+      value: 'about',
+      label: 'About'
+    },
+    {
+      value: 'github',
+      label: 'GitHub'
+    },
+    {
+      value: 'discord',
+      label: 'Discord'
+    },
+
+  ]
+
   return (
     <div
       className="navbar"
@@ -62,6 +80,11 @@ export const NavBar = () => {
             Twitter
           </a>
         </div>
+        {/*
+          <Select options={options} onChange={(values) => { 
+            this.setValues(values)
+          }} />
+        */}
       </div>
     </div>
   );

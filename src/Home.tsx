@@ -90,8 +90,6 @@ export const Home = () => {
             padding: '1vw',
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
             marginTop: "5vw",
             width: "85.4vw",
             height: "85.4vh",
