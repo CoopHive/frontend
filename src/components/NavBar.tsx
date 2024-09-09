@@ -102,7 +102,11 @@ export const NavBar = () => {
               </>):(
                 <Select options={options} onChange={(values) => { 
                   setValues(values)
-                  window.open(values[0].value)
+                  if ( values[0].label == "About" ) {
+                    navigate('/about')
+                  } else {
+                    window.open(values[0].value)
+                  }
                 }} />
               ) 
           }
