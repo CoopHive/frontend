@@ -88,7 +88,7 @@ export const Home = () => {
         <div
           className="section-content"
           style={{
-            maxWidth: "1000px",
+            width: "85.4vw",
             fontSize: "1.5em",
             marginTop: "5vw",
             backgroundColor: "rgba(0, 0, 0, 0.055)",
@@ -140,7 +140,7 @@ export const Home = () => {
         <div
           className="section-content"
           style={{
-            maxWidth: "1000px",
+            width: "85.4vw",
             fontSize: "1.5em",
             marginTop: "5vw",
             backgroundColor: "rgba(0, 0, 0, 0.055)",
@@ -194,6 +194,49 @@ export const Home = () => {
           Backed By
         </h1>
         <div
+          className="flex-row-wrap"
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "5vw",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <div
+            style={{
+              height: "161px"
+            }}
+            className="portrait-card">
+            <h2>Incubation</h2>
+            <img
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
+            src={protocolLabsImage} alt="Protocol Labs" />
+          </div>
+          <div style={{ height: "161px" }} className="portrait-card">
+            <h2>2024 Cohort</h2>
+            <img
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
+            src={berkeleyImage} alt="Berkeley Blockchain Xcelerator" />
+          </div>
+          <div style={{ height: "161px" }} className="portrait-card">
+            <h2>Summer 2024 Fellowship</h2>
+            <img
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
+            src={orangeDaoImage} alt="Orange DAO" />
+          </div>
+        </div>
+        {/*
+        <div
           className="grid-container card-container"
           style={{
             marginTop: "5vw",
@@ -227,6 +270,7 @@ export const Home = () => {
             <p className="card-content"></p>
           </div>
         </div>
+        */}
       </div>
     </>
   );
