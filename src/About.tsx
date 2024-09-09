@@ -128,16 +128,17 @@ const advisorPortraitData = [
 ];
 
 export const About = () => {
-  const { width } = useWindowSize();
+  const { width, height } = useWindowSize();
   return (
     <>
       <div
         className="pane background-pane"
         style={{
-          paddingTop: "10vh",
+          paddingTop: width < 930 ? "30vh" :"0",
+          height: width < 930 ? "130vh" : "100vh",
           backgroundImage: `url(${Background})`,
         }}
-      >{ ( width > 300 )&&(
+      >
         <h2
           className="flex-row-wrap"
           style={{
@@ -147,8 +148,7 @@ export const About = () => {
           }}
         >
           Mission
-        </h2>)
-        }
+        </h2>
         <div className="flex-row-wrap card-container">
           <div className="card">
             <h2 style={{fontSize: "1.2em"}}className="card-title">
@@ -179,7 +179,7 @@ export const About = () => {
       <div
         className="pane background-pane"
         style={{
-          paddingTop: "10vh",
+          paddingTop: width < 930 ? "30vh" :"0",
           backgroundImage: `url(${Background2})`,
         }}
       >
@@ -222,7 +222,7 @@ export const About = () => {
                   alt={portrait.name}
                 />
                 <h2>{portrait.title}</h2>
-                <p style={{ width: "380px" }}>
+                <p style={{ width: "380px", paddingLeft: '10px' }}>
                   {portrait.bio}
                 </p>
               </div>
@@ -260,7 +260,7 @@ export const About = () => {
                   alt={portrait.name}
                 />
                 <h2>{portrait.title}</h2>
-                <p style={{ width: "380px" }}>
+                <p style={{ width: "380px", paddingLeft: '10px' }}>
                   {portrait.bio}
                 </p>
               </div>
