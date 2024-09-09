@@ -91,8 +91,8 @@ export const Home = () => {
             display: "flex",
             flexDirection: "column",
             marginTop: "5vw",
-            width: "85.4vw",
-            height: "85.4vh",
+            width: "61.8vw",
+            height: "61.8vh",
             backgroundColor: 'rgba(0, 0, 0, 0.055)',
             backdropFilter: 'blur(9px)',
             fontSize: "1.5em",
@@ -106,23 +106,23 @@ export const Home = () => {
             negotiating on their behalf, trading with other agents, buying and
             selling data, compute, and everyday items to meet their personal
             financial goals.
-          </p>
+          </p><br/>
           <p>
             CoopHive is building the only platform that lets agents barter and
             exchange complex combinations of goods and services on behalf of
             their owners.
-          </p>
+          </p><br/>
           <p>
             We are starting with buying and selling compute in a distributed
             network. We will expand to storage, bandwidth, verifiable computing,
             off-chain compute jobs from smart contracts, RWA marketplaces,
             tokenization of latent computing power, bridging, energy, and more.
-          </p>
+          </p><br/>
           <p>
             In the future, CoopHive will be the new Amazon that lets any agent
             exchange goods and services to maximize the utility of the owners
             they represent.
-          </p>
+          </p><br/>
         </div>
       </div>
       <div
@@ -144,13 +144,17 @@ export const Home = () => {
         <div
           className="section-content"
           style={{
-            width: "85.4vw",
-            height: '100vh',
-            fontSize: "1.5em",
+            padding: '1vw',
+            display: "flex",
+            flexDirection: "column",
             marginTop: "5vw",
-            backgroundColor: "rgba(0, 0, 0, 0.055)",
-            backdropFilter: "blur(9px)",
-            padding: "1vw",
+            width: "61.8vw",
+            height: "61.8vh",
+            backgroundColor: 'rgba(0, 0, 0, 0.055)',
+            backdropFilter: 'blur(9px)',
+            fontSize: "1.5em",
+            overflowY: 'scroll',
+            scrollbarWidth: 'none',
           }}
         >
           <p>

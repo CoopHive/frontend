@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Logo from "@/assets/coophive-logo-greyscale.png";
 import { Link } from "react-router-dom";
 import  Select from 'react-dropdown-select';
-
+import { useWindowSize } from "@uidotdev/usehooks";
 export const NavBar = () => {
+  const { width } =  useWindowSize();
   const options =  [
     {
       value: 'about',
@@ -16,8 +18,11 @@ export const NavBar = () => {
       value: 'discord',
       label: 'Discord'
     },
-
   ]
+
+  const [ values, setValues ] = useState(options);
+
+
 
   return (
     <div
@@ -45,46 +50,48 @@ export const NavBar = () => {
           <h2 style={{ padding: " 0 1vw" }}>CoopHive</h2>
         </div>
         <div className="flex-row-wrap" style={{ alignItems: "center" }}>
-          <Link to="/about" className="navlink">
-            About
-          </Link>
-          <a
-            target="_blank"
-            href="https://github.com/coophive"
-            className="navlink"
-          >
-            GitHub
-          </a>
-          <a
-            target="_blank"
-            href="https://alkahest.coophive.network"
-            className="navlink"
-          >
-            Docs
-          </a>
-          <a
-            target="_blank"
-            href="https://alkahest.coophive.network/Whitepaper.html"
-            className="navlink"
-          >
-            Whitepaper
-          </a>
-          <a
-            target="_blank"
-            href="https://discord.gg/b4XpHz6N73"
-            className="navlink"
-          >
-            Discord
-          </a>
-          <a target="_blank" href="https://x.com/CoopHive" className="navlink">
-            Twitter
-          </a>
+          { width < 425 ? (<>
+              <Link to="/about" className="navlink">
+                About
+              </Link>
+              <a
+                target="_blank"
+                href="https://github.com/coophive"
+                className="navlink"
+              >
+                GitHub
+              </a>
+              <a
+                target="_blank"
+                href="https://alkahest.coophive.network"
+                className="navlink"
+              >
+                Docs
+              </a>
+              <a
+                target="_blank"
+                href="https://alkahest.coophive.network/Whitepaper.html"
+                className="navlink"
+              >
+                Whitepaper
+              </a>
+              <a
+                target="_blank"
+                href="https://discord.gg/b4XpHz6N73"
+                className="navlink"
+              >
+                Discord
+              </a>
+              <a target="_blank" href="https://x.com/CoopHive" className="navlink">
+                Twitter
+              </a>
+              </>):(
+                <Select options={options} onChange={(values) => { 
+                  this.setValues(values)
+                }} />
+              ) 
+          }
         </div>
-        {/*
-          <Select options={options} onChange={(values) => { 
-            this.setValues(values)
-          }} />
-        */}
       </div>
     </div>
   );
