@@ -3,20 +3,34 @@ import Logo from "@/assets/coophive-logo-greyscale.png";
 import { Link } from "react-router-dom";
 import  Select from 'react-dropdown-select';
 import { useWindowSize } from "@uidotdev/usehooks";
+import { useNavigate } from "react-router-dom";
 export const NavBar = () => {
   const { width } =  useWindowSize();
+  const navigate = useNavigate();
   const options =  [
     {
-      value: 'about',
+      value: '/about',
       label: 'About'
     },
     {
-      value: 'github',
+      value: 'https://github.com/coophive',
       label: 'GitHub'
     },
     {
-      value: 'discord',
+      value: 'https://alkahest.coophive.network',
+      label: 'Docs'
+    },
+    {
+      value: 'https://alkahest.coophive.network/whitepaper.pdf',
+      label: 'Whitepaper'
+    },
+    {
+      value: 'https://discord.com/invite/b4XpHz6N73',
       label: 'Discord'
+    },
+    {
+      value: 'https://x.com/coophive',
+      label: 'Twitter'
     },
   ]
 
@@ -50,7 +64,7 @@ export const NavBar = () => {
           <h2 style={{ padding: " 0 1vw" }}>CoopHive</h2>
         </div>
         <div className="flex-row-wrap" style={{ alignItems: "center" }}>
-          { width < 425 ? (<>
+          { width > 720 ? (<>
               <Link to="/about" className="navlink">
                 About
               </Link>
@@ -87,7 +101,8 @@ export const NavBar = () => {
               </a>
               </>):(
                 <Select options={options} onChange={(values) => { 
-                  this.setValues(values)
+                  setValues(values)
+                  window.open(values[0].value)
                 }} />
               ) 
           }

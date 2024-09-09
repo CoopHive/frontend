@@ -79,7 +79,7 @@ export const Home = () => {
         <h1
           style={{
             textAlign: "center",
-            fontSize: "5.5vw",
+            fontSize: "3.4vw",
             marginTop: "10vw",
           }}
         >
@@ -135,7 +135,7 @@ export const Home = () => {
           className=""
           style={{
             alignItems: "center",
-            fontSize: "5.5vw",
+            fontSize: "3.4vw",
             textAlign: "center",
           }}
         >
