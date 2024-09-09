@@ -95,7 +95,7 @@ export const Home = () => {
             height: "61.8vh",
             backgroundColor: 'rgba(0, 0, 0, 0.055)',
             backdropFilter: 'blur(9px)',
-            fontSize: "1.618em",
+            fontSize: "1.2em",
             overflowY: 'scroll',
             scrollbarWidth: 'none',
           }}
@@ -152,7 +152,7 @@ export const Home = () => {
             height: "61.8vh",
             backgroundColor: 'rgba(0, 0, 0, 0.055)',
             backdropFilter: 'blur(9px)',
-            fontSize: "1.618em",
+            fontSize: "1.2em",
             overflowY: 'scroll',
             scrollbarWidth: 'none',
           }}
