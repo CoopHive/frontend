@@ -45,7 +45,7 @@ export const NavBar = () => {
         zIndex: "9999",
         padding: "1vh 1vw",
         position: "fixed",
-        width: "98%",
+        width: "100vw",
       }}
     >
       <div
@@ -99,7 +99,7 @@ export const NavBar = () => {
               <a target="_blank" href="https://x.com/CoopHive" className="navlink">
                 Twitter
               </a>
-              </>):(
+              </>):(<div style={{paddingRight: "5vw"}}>
                 <Select options={options} onChange={(values) => { 
                   setValues(values)
                   if ( values[0].label == "About" ) {
@@ -108,7 +108,7 @@ export const NavBar = () => {
                     window.open(values[0].value)
                   }
                 }} />
-              ) 
+                </div>) 
           }
         </div>
       </div>

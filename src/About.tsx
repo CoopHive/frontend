@@ -222,7 +222,7 @@ export const About = () => {
                   alt={portrait.name}
                 />
                 <h2>{portrait.title}</h2>
-                <p style={{ width: "380px", paddingLeft: '10px' }}>
+                <p style={{ width: "380px", paddingLeft: '30px' }}>
                   {portrait.bio}
                 </p>
               </div>
@@ -260,7 +260,7 @@ export const About = () => {
                   alt={portrait.name}
                 />
                 <h2>{portrait.title}</h2>
-                <p style={{ width: "380px", paddingLeft: '10px' }}>
+                <p style={{ width: "380px", paddingLeft: '30px' }}>
                   {portrait.bio}
                 </p>
               </div>
