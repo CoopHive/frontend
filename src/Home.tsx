@@ -79,7 +79,7 @@ export const Home = () => {
         <h1
           style={{
             textAlign: "center",
-            fontSize: "3.4vw",
+            fontSize: "3.618vw",
             marginTop: "10vw",
           }}
         >
@@ -95,7 +95,7 @@ export const Home = () => {
             height: "61.8vh",
             backgroundColor: 'rgba(0, 0, 0, 0.055)',
             backdropFilter: 'blur(9px)',
-            fontSize: "1.5em",
+            fontSize: "1.618em",
             overflowY: 'scroll',
             scrollbarWidth: 'none',
           }}
@@ -135,7 +135,7 @@ export const Home = () => {
           className=""
           style={{
             alignItems: "center",
-            fontSize: "3.4vw",
+            fontSize: "3.618vw",
             textAlign: "center",
           }}
         >
@@ -152,7 +152,7 @@ export const Home = () => {
             height: "61.8vh",
             backgroundColor: 'rgba(0, 0, 0, 0.055)',
             backdropFilter: 'blur(9px)',
-            fontSize: "1.5em",
+            fontSize: "1.618em",
             overflowY: 'scroll',
             scrollbarWidth: 'none',
           }}
