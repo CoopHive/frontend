@@ -17,7 +17,7 @@ import Chris from "@/assets/portraits/chris-hill.jpeg";
 import Michael from "@/assets/portraits/michael_zargham.jpg";
 
 import { Link } from "react-router-dom";
-
+import { useWindowSize } from "@uidotdev/usehooks";
 const teamPortraitData = [
   {
     name: "Levi Rybalov",
@@ -128,14 +128,16 @@ const advisorPortraitData = [
 ];
 
 export const About = () => {
+  const { width } = useWindowSize();
   return (
     <>
       <div
         className="pane background-pane"
         style={{
+          paddingTop: "10vh",
           backgroundImage: `url(${Background})`,
         }}
-      >
+      >{ ( width > 300 )&&(
         <h2
           className="flex-row-wrap"
           style={{
@@ -145,10 +147,11 @@ export const About = () => {
           }}
         >
           Mission
-        </h2>
+        </h2>)
+        }
         <div className="flex-row-wrap card-container">
           <div className="card">
-            <h2 className="card-title">
+            <h2 style={{fontSize: "1.2em"}}className="card-title">
               Economic Empowerment via Agentic Representation
             </h2>
             <p className="card-content">
@@ -158,13 +161,13 @@ export const About = () => {
             </p>
           </div>
           <div className="card">
-            <h2 className="card-title">Neutral Marketplaces</h2>
+            <h2 style={{fontSize: "1.2em"}} className="card-title">Neutral Marketplaces</h2>
             <p className="card-content" style={{ marginBottom: "64px", marginTop: "-50px" }}>
               Token-agnostic, no-fee marketplaces.{" "}
             </p>
           </div>
           <div className="card">
-            <h2 className="card-title">Tokenization of Idle Computing Power</h2>
+            <h2 style={{fontSize: "1.2em"}} className="card-title">Tokenization of Idle Computing Power</h2>
             <p className="card-content">
               Hardware is underutilized all around the world. The space of
               potentially valuable computations is infinite. CoopHive turns 
@@ -176,6 +179,7 @@ export const About = () => {
       <div
         className="pane background-pane"
         style={{
+          paddingTop: "10vh",
           backgroundImage: `url(${Background2})`,
         }}
       >
