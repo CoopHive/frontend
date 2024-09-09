@@ -89,6 +89,7 @@ export const Home = () => {
           className="section-content"
           style={{
             width: "85.4vw",
+            height: "100vh",
             fontSize: "1.5em",
             marginTop: "5vw",
             backgroundColor: "rgba(0, 0, 0, 0.055)",
