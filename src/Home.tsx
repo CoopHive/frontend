@@ -86,15 +86,20 @@ export const Home = () => {
           Why Are We Building It?
         </h1>
         <div
-          className="section-content"
           style={{
-            width: "85.4vw",
-            height: "100vh",
-            fontSize: "1.5em",
+            padding: '1vw',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
             marginTop: "5vw",
-            backgroundColor: "rgba(0, 0, 0, 0.055)",
-            backdropFilter: "blur(9px)",
-            padding: "1vw",
+            width: "85.4vw",
+            height: "85.4vh",
+            backgroundColor: 'rgba(0, 0, 0, 0.055)',
+            backdropFilter: 'blur(9px)',
+            fontSize: "1.5em",
+            overflowY: 'scroll',
+            scrollbarWidth: 'none',
           }}
         >
           <p>
@@ -142,6 +147,7 @@ export const Home = () => {
           className="section-content"
           style={{
             width: "85.4vw",
+            height: '100vh',
             fontSize: "1.5em",
             marginTop: "5vw",
             backgroundColor: "rgba(0, 0, 0, 0.055)",
@@ -209,31 +215,31 @@ export const Home = () => {
               height: "161px"
             }}
             className="portrait-card">
-            <h2>Incubation</h2>
             <img
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
               }}
             src={protocolLabsImage} alt="Protocol Labs" />
+            <h2>Incubation</h2>
           </div>
           <div style={{ height: "161px" }} className="portrait-card">
-            <h2>2024 Cohort</h2>
             <img
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
               }}
             src={berkeleyImage} alt="Berkeley Blockchain Xcelerator" />
+            <h2>2024 Cohort</h2>
           </div>
           <div style={{ height: "161px" }} className="portrait-card">
-            <h2>Summer 2024 Fellowship</h2>
             <img
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
               }}
             src={orangeDaoImage} alt="Orange DAO" />
+            <h2>Summer 2024 Fellowship</h2>
           </div>
         </div>
         {/*
