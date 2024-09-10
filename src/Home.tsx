@@ -126,6 +126,8 @@ export default function Home() {
             <Button asChild>
               <a
                 href="https://alkahest.coophive.network/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
               >
                 Read our docs
@@ -135,6 +137,8 @@ export default function Home() {
             <Button asChild variant="outline">
               <a
                 href="https://github.com/coophive"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
               >
                 <IoLogoGithub size="1.5em" />

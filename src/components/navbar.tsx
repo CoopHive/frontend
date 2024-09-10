@@ -38,6 +38,8 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
               >
                 {item.label}
