@@ -29,7 +29,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="flex flex-1 justify-between">
-          <a href="/" className="flex space-x-2 pl-4">
+          <a href="/" className="flex space-x-2 pl-4 items-center">
+            <img src="/coophive-logo-greyscale.png" alt="CoopHive Logo" className="h-8" />
             <span className="font-bold">CoopHive</span>
           </a>
           <nav className="hidden md:flex space-x-6 text-sm font-medium max-w-[20%]">
