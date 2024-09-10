@@ -20,6 +20,7 @@ import chris from "./assets/portraits/chris-hill.jpeg";
 import michael from "./assets/portraits/michael_zargham.jpg";
 
 import bg1 from "./assets/bg1.png";
+import { LandingPrimaryTextCtaSection } from "./components/landing/cta/LandingPrimaryCta";
 
 export default function About() {
   const missionItems = [
@@ -54,6 +55,13 @@ export default function About() {
       >
         <LandingFeatureList title="Mission" featureItems={missionItems} />
       </div>
+
+      <LandingPrimaryTextCtaSection 
+        title="Why Are We Building This" 
+        descriptionComponent={<Building />}  
+      />
+
+
       <LandingProductFeaturesGrid title="Team" withBackground={false}>
         <LandingProductFeature
           title="Levi Rybalov - Founder"
@@ -153,4 +161,31 @@ export default function About() {
       />
     </>
   );
+}
+
+
+function Building() {
+  return (
+    <p className="text-left">
+    Autonomous agents are just beginning to trade simple assets like
+    stocks or ETH. In the future, everyone will have an AI agent
+    negotiating on their behalf, trading with other agents, buying and
+    selling data, compute, and everyday items to meet their personal
+    financial goals. <br />
+    <br />
+    CoopHive is building the only platform that lets agents barter and
+    exchange complex combinations of goods and services on behalf of their
+    owners. <br />
+    <br />
+    We are starting with buying and selling compute in a distributed
+    network. We will expand to storage, bandwidth, verifiable computing,
+    off-chain compute jobs from smart contracts, RWA marketplaces,
+    tokenization of latent computing power, bridging, energy, and more.{" "}
+    <br />
+    <br />
+    In the future, CoopHive will be the new Amazon that lets any agent
+    exchange goods and services to maximize the utility of the owners they
+    represent.
+  </p>
+);
 }
