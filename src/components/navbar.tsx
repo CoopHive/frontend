@@ -27,7 +27,7 @@ export default function Navbar() {
           <a href="/" className="flex space-x-2 pl-4">
             <span className="font-bold">CoopHive</span>
           </a>
-          <nav className="hidden md:flex space-x-6 text-sm font-medium max-w-[10%]">
+          <nav className="hidden md:flex space-x-6 text-sm font-medium max-w-[20%]">
             {navItems.map((item) => (
               <a
                 key={item.href}
