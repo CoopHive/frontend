@@ -3,10 +3,7 @@ name: Deploy static content to Pages
 on:
   push:
     branches:
-    - default
-  pull_request:
-    branches:
-    - default
+    - pageui
 
 jobs:
   build-and-deploy:
@@ -28,20 +25,20 @@ jobs:
       - name: Build
         run: npm run build
 
-      # - name: Create CNAME file
-      #   run: echo "www.coophive.network" > ./dist/CNAME
+      - name: Create CNAME file
+        run: echo "www.coophive.network" > ./dist/CNAME
         
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     # Upload dist folder
-      #     path: './dist'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload dist folder
+          path: './dist'
 
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
