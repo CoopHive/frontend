@@ -53,7 +53,10 @@ export default function About() {
           backgroundPosition: "center",
         }}
       >
-        <LandingFeatureList title="Mission" featureItems={missionItems} />
+        <LandingFeatureList 
+        titleComponent={<h1 className="text-3xl font-semibold leading-tight max-w-xs sm:max-w-none md:text-4xl lg:text-5xl fancyHeading text-center" >Mission</h1>}
+        featureItems={missionItems} 
+        />
       </div>
 
       <LandingPrimaryTextCtaSection 

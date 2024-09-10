@@ -120,7 +120,7 @@ export default function Home() {
       >
         <LandingPrimaryTextCtaSection
           titleComponent={<h1 className="text-4xl">Programmable Money Needs <br></br> Programmable Markets</h1>}
-          description="CoopHive is building a way for agents to trade and negotiate over anything and everything."
+          description="CoopHive is building a way for agents to trade and negotiate over anything and everything"
         >
           <div className="flex flex-row gap-2">
             <Button asChild>
@@ -184,19 +184,6 @@ export default function Home() {
       />
       <LandingPrimaryTextCtaSection title="Backed By" />
       <BackedBy />
-      <div
-        style={{
-          backgroundImage: `url(${bg2})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <LandingFaqCollapsibleSection
-          title="FAQ"
-          description="Why are we building CoopHive the way we are?"
-          faqItems={faqItems}
-        />
-      </div>
     </>
   );
 }
