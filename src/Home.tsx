@@ -119,8 +119,8 @@ export default function Home() {
         }}
       >
         <LandingPrimaryTextCtaSection
-          title="Programmable Money Needs Programmable Markets"
-          description="CoopHive is building a way for agents to trade and negotiate over anything and everything."
+          titleComponent={<h1 className="text-4xl">Programmable Money Needs <br></br> Programmable Markets</h1>}
+          description="CoopHive is building a way for agents to trade and nego/tiate over anything and everything."
         >
           <div className="flex flex-row gap-2">
             <Button asChild>
