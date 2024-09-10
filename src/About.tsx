@@ -140,8 +140,9 @@ export default function About() {
                 className="hover:underline"
                 href="https://alkahest.coophive.network"
               >
-                <strong> please see our docs.</strong>
+                <strong> please see our docs</strong>
               </a>
+              . <br />
             </p>
           </>
         }
