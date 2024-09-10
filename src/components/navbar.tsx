@@ -6,7 +6,6 @@ import * as React from "react";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaDiscord } from "react-icons/fa";
 
-
 import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "./shared/ui/button";
 
@@ -33,7 +32,11 @@ export default function Navbar() {
       <div className="container flex h-14 items-center">
         <div className="flex flex-1 justify-between">
           <a href="/" className="flex space-x-2 pl-4 items-center">
-            <img src="/coophive-logo-greyscale.png" alt="CoopHive Logo" className="h-8" />
+            <img
+              src="/coophive-logo-greyscale.png"
+              alt="CoopHive Logo"
+              className="h-8"
+            />
             <span className="font-bold">CoopHive</span>
           </a>
           <nav className="hidden md:flex space-x-6 text-sm font-medium max-w-[20%]">
@@ -42,7 +45,11 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  item.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
               >
                 {item.label}
