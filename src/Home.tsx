@@ -85,46 +85,35 @@ export const Home = () => {
         >
           Why Are We Building It?
         </h1>
-        <div
-          style={{
-            padding: '1vw',
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "5vw",
-            width: "61.8vw",
-            height: "61.8vh",
-            backgroundColor: 'rgba(0, 0, 0, 0.055)',
-            backdropFilter: 'blur(9px)',
-            fontSize: "1.2em",
-            overflowY: 'scroll',
-            scrollbarWidth: 'none',
-          }}
-        >
-          <p>
+
+        <div className="big-card">
+          <p className="big-card-content">
             Autonomous agents are just beginning to trade simple assets like
             stocks or ETH. In the future, everyone will have an AI agent
             negotiating on their behalf, trading with other agents, buying and
             selling data, compute, and everyday items to meet their personal
             financial goals.
-          </p><br/>
-          <p>
+          </p>
+          <p className="big-card-content">
             CoopHive is building the only platform that lets agents barter and
             exchange complex combinations of goods and services on behalf of
             their owners.
-          </p><br/>
-          <p>
+          </p>
+          <p className="big-card-content">
             We are starting with buying and selling compute in a distributed
             network. We will expand to storage, bandwidth, verifiable computing,
             off-chain compute jobs from smart contracts, RWA marketplaces,
             tokenization of latent computing power, bridging, energy, and more.
-          </p><br/>
-          <p>
+          </p>
+          <p className="big-card-content">
             In the future, CoopHive will be the new Amazon that lets any agent
             exchange goods and services to maximize the utility of the owners
             they represent.
-          </p><br/>
+          </p>
         </div>
+
       </div>
+
       <div
         className="pane background-pane"
         style={{
