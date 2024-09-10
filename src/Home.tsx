@@ -171,8 +171,9 @@ export default function Home() {
                 className="hover:underline"
                 href="https://alkahest.coophive.network"
               >
-                <strong> please see our docs.</strong>
+                <strong> please see our docs</strong>
               </a>
+              . <br />
             </p>
           </>
         }
