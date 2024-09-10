@@ -144,9 +144,21 @@ button:focus-visible {
   margin: 1vw 1vw;
 }
 
-.big-card {
+.why-card {
   width: 95%;
   aspect-ratio: 2 / 1;
+  background-color: rgba(0, 0, 0, 0.055);
+  backdrop-filter: blur(9px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw 1vw;
+}
+
+.want-card {
+  width: 95%;
+  aspect-ratio: 5 / 1;
   background-color: rgba(0, 0, 0, 0.055);
   backdrop-filter: blur(9px);
   display: flex;
@@ -173,7 +185,7 @@ button:focus-visible {
   width: 85.4%;
 }
 
-.big-card-content {
+.why-card-content {
   font-size: 1.5vw;
   align-items: left;
   text-align: left;
@@ -181,8 +193,20 @@ button:focus-visible {
   margin-bottom: 1em;
 }
 
-.big-card-content:last-of-type {
-  margin-bottom: 0; /* Removes margin from the last paragraph */
+.why-card-content:last-of-type {
+  margin-bottom: 0;
+}
+
+.want-card-content {
+  font-size: 1.5vw;
+  align-items: left;
+  text-align: left;
+  width: 85.4%;
+  margin-bottom: 1em;
+}
+
+.want-card-content:last-of-type {
+  margin-bottom: 0;
 }
 
 .portrait-card {

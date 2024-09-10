@@ -86,26 +86,26 @@ export const Home = () => {
           Why Are We Building It?
         </h1>
 
-        <div className="big-card">
-          <p className="big-card-content">
+        <div className="why-card">
+          <p className="why-card-content">
             Autonomous agents are just beginning to trade simple assets like
             stocks or ETH. In the future, everyone will have an AI agent
             negotiating on their behalf, trading with other agents, buying and
             selling data, compute, and everyday items to meet their personal
             financial goals.
           </p>
-          <p className="big-card-content">
+          <p className="why-card-content">
             CoopHive is building the only platform that lets agents barter and
             exchange complex combinations of goods and services on behalf of
             their owners.
           </p>
-          <p className="big-card-content">
+          <p className="why-card-content">
             We are starting with buying and selling compute in a distributed
             network. We will expand to storage, bandwidth, verifiable computing,
             off-chain compute jobs from smart contracts, RWA marketplaces,
             tokenization of latent computing power, bridging, energy, and more.
           </p>
-          <p className="big-card-content">
+          <p className="why-card-content">
             In the future, CoopHive will be the new Amazon that lets any agent
             exchange goods and services to maximize the utility of the owners
             they represent.
@@ -130,26 +130,12 @@ export const Home = () => {
         >
           Want to Try?
         </h1>
-        <div
-          className="section-content"
-          style={{
-            padding: '1vw',
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "5vw",
-            width: "61.8vw",
-            height: "61.8vh",
-            backgroundColor: 'rgba(0, 0, 0, 0.055)',
-            backdropFilter: 'blur(9px)',
-            fontSize: "1.2em",
-            overflowY: 'scroll',
-            scrollbarWidth: 'none',
-          }}
-        >
-          <p>
-            CoopHive is currently in development. 
+
+        <div className="want-card">
+          <p className="want-card-content">
+            CoopHive is currently in development.
           </p>
-          <p>
+          <p className="want-card-content">
             You can test out a proof-of-concept of a distributed computing network built on the previous version of the protocol
             <a
               target="_blank"
@@ -160,8 +146,8 @@ export const Home = () => {
               here
             </a>
             .
-            </p>
-            <p>
+          </p>
+          <p className="want-card-content">
             To try out the latest proof-of-concept,
             <a
               target="_blank"
@@ -174,7 +160,9 @@ export const Home = () => {
             .
           </p>
         </div>
+
       </div>
+
       <div
         className="pane background-pane"
         style={{
