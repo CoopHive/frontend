@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import  Select from 'react-dropdown-select';
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useNavigate } from "react-router-dom";
+
 export const NavBar = () => {
   const { width } =  useWindowSize();
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export const NavBar = () => {
         zIndex: "9999",
         padding: "1vh 1vw",
         position: "fixed",
-        width: "100vw",
+        width: "100%",
       }}
     >
       <div
@@ -53,13 +54,17 @@ export const NavBar = () => {
         style={{
           justifyContent: "space-between",
           alignItems: "center",
-          minHeight: "94.4px",
-          height: "8vh",
+          height: width > 720 ? "8vh" : "auto",  // Adjust height for smaller screens
+          padding: width > 720 ? "0" : "1vh 0",  // Add padding for smaller screens
         }}
       >
         <div className="flex-row-wrap" style={{ alignItems: "center" }}>
           <Link to="/">
-            <img style={{ height: "61.8px" }} src={Logo} alt="logo" />
+            <img
+              style={{ height: width > 720 ? "61.8px" : "50px" }}  // Reduce logo size on small screens
+              src={Logo}
+              alt="logo"
+            />
           </Link>
           <h2 style={{ padding: " 0 1vw" }}>CoopHive</h2>
         </div>
