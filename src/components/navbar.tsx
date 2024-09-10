@@ -3,7 +3,10 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import * as React from "react";
-import { IoLogoDiscord, IoLogoGithub } from "react-icons/io5";
+import { IoLogoGithub } from "react-icons/io5";
+import { FaDiscord } from "react-icons/fa";
+
+
 import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "./shared/ui/button";
 
@@ -18,7 +21,7 @@ const navItems = [
   { href: "https://x.com/CoopHive", label: <FaXTwitter size="1.5em" /> },
   {
     href: "https://discord.gg/b4XpHz6N73",
-    label: <IoLogoDiscord size="1.5em" />,
+    label: <FaDiscord size="1.5em" />,
   },
 ];
 
