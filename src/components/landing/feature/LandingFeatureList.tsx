@@ -64,7 +64,7 @@ export const LandingFeatureList = ({
         className={clsx('w-full p-6 max-w-full container-wide relative z-10')}
       >
         {title ? (
-          <h2 className="text-3xl font-semibold leading-tight max-w-xs sm:max-w-none md:text-4xl lg:text-5xl fancyHeading">
+          <h2 className="text-3xl font-semibold leading-tight max-w-xs sm:max-w-none md:text-4xl lg:text-5xl fancyHeading text-center">
             {title}
           </h2>
         ) : (
