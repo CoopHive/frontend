@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { colors } from '@/data/config/colors';
 
 export const GlowBg = ({
   className,
