@@ -130,6 +130,8 @@ export default function About() {
               <a
                 className="hover:underline "
                 href="https://github.com/CoopHive/dcn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <strong>here</strong>
               </a>
@@ -139,6 +141,8 @@ export default function About() {
               <a
                 className="hover:underline"
                 href="https://alkahest.coophive.network"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <strong> please see our docs</strong>
               </a>
