@@ -10,6 +10,9 @@ import protocolLabsImage from "./assets/protocol_labs.png";
 import { Button } from "./components/shared/ui/button";
 import { IoLogoGithub } from "react-icons/io5";
 
+import bg1 from "./assets/bg1.png";
+import bg2 from "./assets/bg2.png";
+
 export default function Home() {
   const featureItems = [
     {
@@ -108,27 +111,39 @@ export default function Home() {
 
   return (
     <>
-      <LandingPrimaryTextCtaSection
-        title="CoopHive is like Amazon for autonomous agents"
-        description="We are building a way for agents to trade and negotiate over anything and everything."
+      <div
+        style={{
+          backgroundImage: `url(${bg1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="flex flex-row gap-2">
+        <LandingPrimaryTextCtaSection
+          title="CoopHive is like Amazon for autonomous agents"
+          description="We are building a way for agents to trade and negotiate over anything and everything."
+        >
+          <div className="flex flex-row gap-2">
+            <Button asChild>
+              <a
+                href="https://alkahest.coophive.network/"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
+              >
+                Read our docs
+              </a>
+            </Button>
 
-          <Button asChild>
-            <a href="https://alkahest.coophive.network/" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium">
-              Read our docs
-            </a>
-          </Button>
-
-          <Button asChild variant="outline">
-            <a href="https://github.com/coophive" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium">
-              <IoLogoGithub size="1.5em" />
-              &nbsp; See the code
-            </a>
-          </Button>
-
-        </div>
-      </LandingPrimaryTextCtaSection>
+            <Button asChild variant="outline">
+              <a
+                href="https://github.com/coophive"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
+              >
+                <IoLogoGithub size="1.5em" />
+                &nbsp; See the code
+              </a>
+            </Button>
+          </div>
+        </LandingPrimaryTextCtaSection>
+      </div>
       <LandingFeatureList title="What is It?" featureItems={featureItems} />
       <LandingBandSection
         title="Want to Try?"
@@ -160,11 +175,19 @@ export default function Home() {
       />
       <LandingPrimaryTextCtaSection title="Backed By" />
       <BackedBy />
-      <LandingFaqCollapsibleSection
-        title="FAQ"
-        description="Why are we building CoopHive the way we are?"
-        faqItems={faqItems}
-      />
+      <div
+        style={{
+          backgroundImage: `url(${bg2})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <LandingFaqCollapsibleSection
+          title="FAQ"
+          description="Why are we building CoopHive the way we are?"
+          faqItems={faqItems}
+        />
+      </div>
     </>
   );
 }

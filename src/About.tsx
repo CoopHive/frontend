@@ -19,6 +19,8 @@ import david from "./assets/portraits/aronchick.jpeg";
 import chris from "./assets/portraits/chris-hill.jpeg";
 import michael from "./assets/portraits/michael_zargham.jpg";
 
+import bg1 from "./assets/bg1.png";
+
 export default function About() {
   const missionItems = [
     {
@@ -43,7 +45,15 @@ export default function About() {
 
   return (
     <>
-      <LandingFeatureList title="Mission" featureItems={missionItems} />
+      <div
+        style={{
+          backgroundImage: `url(${bg1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <LandingFeatureList title="Mission" featureItems={missionItems} />
+      </div>
       <LandingProductFeaturesGrid title="Team" withBackground={false}>
         <LandingProductFeature
           title="Levi Rybalov - Founder"
