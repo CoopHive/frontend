@@ -93,7 +93,7 @@ export default function Home() {
       ),
     },
     {
-      question: "Why aren't existing DePIN networks good enough?",
+      question: "How do we improve upon existing DePIN protocols?",
       answer: (
         <p>
           See{" "}
@@ -119,7 +119,7 @@ export default function Home() {
         }}
       >
         <LandingPrimaryTextCtaSection
-          title="Like Amazon, but for autonomous agents"
+          title="Programmable Money Needs Programmable Markets"
           description="CoopHive is building a way for agents to trade and negotiate over anything and everything."
         >
           <div className="flex flex-row gap-2">
