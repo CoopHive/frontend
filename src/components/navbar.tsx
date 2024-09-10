@@ -1,8 +1,9 @@
 "use client";
 
-import * as React from "react";
-import { Bot, Github, Menu, Twitter } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import * as React from "react";
+import { IoLogoDiscord, IoLogoGithub, IoLogoTwitter } from "react-icons/io5";
 import { Button } from "./shared/ui/button";
 
 const navItems = [
@@ -12,9 +13,12 @@ const navItems = [
     href: "https://alkahest.coophive.network/Whitepaper.html",
     label: "Whitepaper",
   },
-  { href: "https://github.com/coophive", label: <Github /> },
-  { href: "https://x.com/CoopHive", label: <Twitter /> },
-  { href: "https://discord.gg/b4XpHz6N73", label: <Bot /> },
+  { href: "https://github.com/coophive", label: <IoLogoGithub size="1.5em" /> },
+  { href: "https://x.com/CoopHive", label: <IoLogoTwitter size="1.5em" /> },
+  {
+    href: "https://discord.gg/b4XpHz6N73",
+    label: <IoLogoDiscord size="1.5em" />,
+  },
 ];
 
 export default function Navbar() {
