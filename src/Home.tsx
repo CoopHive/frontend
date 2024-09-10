@@ -120,7 +120,7 @@ export default function Home() {
       >
         <LandingPrimaryTextCtaSection
           titleComponent={<h1 className="text-4xl">Programmable Money Needs <br></br> Programmable Markets</h1>}
-          description="CoopHive is building a way for agents to trade and nego/tiate over anything and everything."
+          description="CoopHive is building a way for agents to trade and negotiate over anything and everything."
         >
           <div className="flex flex-row gap-2">
             <Button asChild>
