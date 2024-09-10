@@ -11,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "./shared/ui/button";
 
 const navItems = [
-  { href: "/about", label: "About" },
+  { href: "/#/about", label: "About" },
   { href: "https://alkahest.coophive.network/", label: "Docs" },
   {
     href: "https://alkahest.coophive.network/Whitepaper.html",
