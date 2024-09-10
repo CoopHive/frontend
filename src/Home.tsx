@@ -8,6 +8,7 @@ import bbxImage from "./assets/berkeley_blockchain_xcelerator.png";
 import orangeDaoImage from "./assets/orange_dao.png";
 import protocolLabsImage from "./assets/protocol_labs.png";
 import { Button } from "./components/shared/ui/button";
+import { IoLogoGithub } from "react-icons/io5";
 
 export default function Home() {
   const featureItems = [
@@ -114,7 +115,7 @@ export default function Home() {
         <div className="flex flex-row gap-2">
           <Button>Read our docs</Button>
           <Button variant="outline">
-            <Github />
+            <IoLogoGithub size="1.5em" />
             &nbsp; See the code
           </Button>
         </div>

@@ -16,7 +16,7 @@ import pratham from "./assets/portraits/pratham.jpeg";
 import kai from "./assets/portraits/kai_davenport.jpeg";
 import luke from "./assets/portraits/luke_marsden.jpeg";
 import david from "./assets/portraits/aronchick.jpeg";
-import chris from "./assets/portraits/chris_hill.jpeg";
+import chris from "./assets/portraits/chris-hill.jpeg";
 import michael from "./assets/portraits/michael_zargham.jpg";
 
 export default function About() {
