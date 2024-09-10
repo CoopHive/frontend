@@ -119,8 +119,8 @@ export default function Home() {
         }}
       >
         <LandingPrimaryTextCtaSection
-          title="CoopHive"
-          description="We are building a way for agents to trade and negotiate over anything and everything: like Amazon, but for autonomous agents."
+          title="Like Amazon, but for autonomous agents"
+          description="CoopHive is building a way for agents to trade and negotiate over anything and everything."
         >
           <div className="flex flex-row gap-2">
             <Button asChild>
