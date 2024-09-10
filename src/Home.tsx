@@ -113,11 +113,20 @@ export default function Home() {
         description="We are building a way for agents to trade and negotiate over anything and everything."
       >
         <div className="flex flex-row gap-2">
-          <Button>Read our docs</Button>
-          <Button variant="outline">
-            <IoLogoGithub size="1.5em" />
-            &nbsp; See the code
+
+          <Button asChild>
+            <a href="https://alkahest.coophive.network/" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium">
+              Read our docs
+            </a>
           </Button>
+
+          <Button asChild variant="outline">
+            <a href="https://github.com/coophive" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium">
+              <IoLogoGithub size="1.5em" />
+              &nbsp; See the code
+            </a>
+          </Button>
+
         </div>
       </LandingPrimaryTextCtaSection>
       <LandingFeatureList title="What is It?" featureItems={featureItems} />
