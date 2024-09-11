@@ -1,122 +1,88 @@
-import { useState } from "react";
-import Logo from "@/assets/coophive-logo-greyscale.png";
-import { Link } from "react-router-dom";
-import  Select from 'react-dropdown-select';
-import { useWindowSize } from "@uidotdev/usehooks";
-import { useNavigate } from "react-router-dom";
+"use client";
 
-export const NavBar = () => {
-  const { width } =  useWindowSize();
-  const navigate = useNavigate();
-  const options =  [
-    {
-      value: '/about',
-      label: 'About'
-    },
-    {
-      value: 'https://github.com/coophive',
-      label: 'GitHub'
-    },
-    {
-      value: 'https://alkahest.coophive.network',
-      label: 'Docs'
-    },
-    {
-      value: 'https://alkahest.coophive.network/whitepaper.pdf',
-      label: 'Whitepaper'
-    },
-    {
-      value: 'https://discord.com/invite/b4XpHz6N73',
-      label: 'Discord'
-    },
-    {
-      value: 'https://x.com/coophive',
-      label: 'Twitter'
-    },
-  ]
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import * as React from "react";
+import { IoLogoGithub } from "react-icons/io5";
+import { FaDiscord } from "react-icons/fa";
 
-  const [ values, setValues ] = useState(options);
+import { FaXTwitter } from "react-icons/fa6";
+import { Button } from "./shared/ui/button";
 
+const navItems = [
+  { href: "/#/about", label: "About" },
+  { href: "https://alkahest.coophive.network/", label: "Docs" },
+  {
+    href: "https://alkahest.coophive.network/Whitepaper.html",
+    label: "Whitepaper",
+  },
+  { href: "https://github.com/coophive", label: <IoLogoGithub size="1.5em" /> },
+  { href: "https://x.com/CoopHive", label: <FaXTwitter size="1.5em" /> },
+  {
+    href: "https://discord.gg/b4XpHz6N73",
+    label: <FaDiscord size="1.5em" />,
+  },
+];
 
+export default function Navbar() {
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div
-      className="navbar"
-      style={{
-        zIndex: "9999",
-        padding: "1vh 1vw",
-        position: "fixed",
-        width: "100%",
-      }}
-    >
-      <div
-        className="flex-row-wrap"
-        style={{
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: width > 720 ? "8vh" : "auto",  // Adjust height for smaller screens
-          padding: width > 720 ? "0" : "1vh 0",  // Add padding for smaller screens
-        }}
-      >
-        <div className="flex-row-wrap" style={{ alignItems: "center" }}>
-          <Link to="/">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center">
+        <div className="flex flex-1 justify-between">
+          <a href="/" className="flex space-x-2 pl-4 items-center">
             <img
-              style={{ height: width > 720 ? "61.8px" : "50px" }}  // Reduce logo size on small screens
-              src={Logo}
-              alt="logo"
+              src="/coophive-logo-greyscale.png"
+              alt="CoopHive Logo"
+              className="h-8"
             />
-          </Link>
-          <h2 style={{ padding: " 0 1vw" }}>CoopHive</h2>
-        </div>
-        <div className="flex-row-wrap" style={{ alignItems: "center" }}>
-          { width > 720 ? (<>
-              <Link to="/about" className="navlink">
-                About
-              </Link>
+            <span className="font-bold">CoopHive</span>
+          </a>
+          <nav className="hidden md:flex space-x-6 text-sm font-medium max-w-[20%]">
+            {navItems.map((item) => (
               <a
-                target="_blank"
-                href="https://github.com/coophive"
-                className="navlink"
+                key={item.href}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  item.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
+                className="transition-colors hover:text-foreground/80 text-foreground/60"
               >
-                GitHub
+                {item.label}
               </a>
-              <a
-                target="_blank"
-                href="https://alkahest.coophive.network"
-                className="navlink"
+            ))}
+          </nav>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
               >
-                Docs
-              </a>
-              <a
-                target="_blank"
-                href="https://alkahest.coophive.network/Whitepaper.html"
-                className="navlink"
-              >
-                Whitepaper
-              </a>
-              <a
-                target="_blank"
-                href="https://discord.gg/b4XpHz6N73"
-                className="navlink"
-              >
-                Discord
-              </a>
-              <a target="_blank" href="https://x.com/CoopHive" className="navlink">
-                Twitter
-              </a>
-              </>):(<div style={{paddingRight: "5vw"}}>
-                <Select options={options} onChange={(values) => { 
-                  setValues(values)
-                  if ( values[0].label == "About" ) {
-                    navigate('/about')
-                  } else {
-                    window.open(values[0].value)
-                  }
-                }} />
-                </div>) 
-          }
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="pr-0">
+              <nav className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-muted-foreground hover:text-primary"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
-    </div>
+    </header>
   );
-};
+}

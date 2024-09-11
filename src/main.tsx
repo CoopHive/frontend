@@ -1,18 +1,22 @@
-import { createRoot } from "react-dom/client";
-import { NavBar } from "./components/NavBar.tsx";
-import { Home } from "@/Home.tsx";
-import { About } from "@/About.tsx";
-import { NoPage } from "./components/NoPage.tsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import Home from "./Home";
+import Navbar from "./components/navbar";
+import About from "./About";
 
-createRoot(document.getElementById("root")!).render(
-  <HashRouter>
-    <NavBar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<NoPage />} />
-    </Routes>
-  </HashRouter>
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  { path: "/about", element: <About /> },
+]);
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <Navbar />
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

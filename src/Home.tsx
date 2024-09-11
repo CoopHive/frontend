@@ -1,263 +1,222 @@
-import Background from "@/assets/about-background.png";
-import Background2 from "@/assets/bee-theif.png";
-import Background3 from "@/assets/about-background-2.png";
+import { LandingPrimaryTextCtaSection } from "@/components/landing/cta/LandingPrimaryCta";
+import { Bot, Component, Github, Link } from "lucide-react";
+import { LandingFeatureList } from "./components/landing/feature/LandingFeatureList";
+import { LandingBandSection } from "./components/landing/LandingBand";
+import { LandingFaqCollapsibleSection } from "./components/landing/LandingFaqCollapsible";
 
-import protocolLabsImage from "@/assets/protocol_labs_transparent_background_cropped.png";
-import berkeleyImage from "@/assets/berkeley_blockchain_xcelerator_2_background_removed_cropped_resized.png";
-import orangeDaoImage from "@/assets/orange_dao_background_removed.png";
+import bbxImage from "./assets/berkeley_blockchain_xcelerator.png";
+import orangeDaoImage from "./assets/orange_dao.png";
+import protocolLabsImage from "./assets/protocol_labs.png";
+import { Button } from "./components/shared/ui/button";
+import { IoLogoGithub } from "react-icons/io5";
 
-export const Home = () => {
+import bg1 from "./assets/bg1.png";
+import bg2 from "./assets/bg2.png";
+
+export default function Home() {
+  const featureItems = [
+    {
+      icon: <Component />,
+      title: "Primitives",
+      description:
+        "Building blocks to create marketplaces that machines need to meet the demands of future economic activity.",
+    },
+    {
+      icon: <Link />,
+      title: "Composable Marketplaces",
+      description:
+        "With CoopHive, fragmented marketplaces like compute, storage, and bandwidth can be composed seamlessly. ",
+    },
+    {
+      icon: <Bot />,
+      title: "Multi-Agent Systems",
+      description:
+        "Autonomous agents are on the rise. The symphony of their interactions will usher in the next revolution in economics.",
+    },
+  ];
+
+  const faqItems = [
+    {
+      question: "Why is this needed?",
+      answer: (
+        <p>
+          Autonomous agents are just beginning to trade simple assets like
+          stocks or ETH. In the future, everyone will have an AI agent
+          negotiating on their behalf, trading with other agents, buying and
+          selling data, compute, and everyday items to meet their personal
+          financial goals. <br />
+          <br />
+          CoopHive is building the only platform that lets agents barter and
+          exchange complex combinations of goods and services on behalf of their
+          owners. <br />
+          <br />
+          We are starting with buying and selling compute in a distributed
+          network. We will expand to storage, bandwidth, verifiable computing,
+          off-chain compute jobs from smart contracts, RWA marketplaces,
+          tokenization of latent computing power, bridging, energy, and more.{" "}
+          <br />
+          <br />
+          In the future, CoopHive will be the new Amazon that lets any agent
+          exchange goods and services to maximize the utility of the owners they
+          represent.
+        </p>
+      ),
+    },
+    {
+      question: "Why build on EAS?",
+      answer: (
+        <p>
+          See{" "}
+          <a
+            className="hover:underline"
+            href="https://alkahest.coophive.network/Asides.html#why-eas"
+            target="_blank"
+          >
+            <strong>Why EAS?</strong>
+          </a>
+        </p>
+      ),
+    },
+    {
+      question: "Why not tokenize everything?",
+      answer: (
+        <p>
+          See{" "}
+          <a
+            className="hover:underline"
+            href="https://alkahest.coophive.network/Asides.html#why-not-tokens"
+            target="_blank"
+          >
+            <strong>Why Not Tokens?</strong>
+          </a>
+        </p>
+      ),
+    },
+    {
+      question: "How do we improve upon existing DePIN protocols?",
+      answer: (
+        <p>
+          See{" "}
+          <a
+            className="hover:underline"
+            href="https://alkahest.coophive.network/Asides.html#why-not-specialized-networks"
+            target="_blank"
+          >
+            <strong>Why Not Specialized Networks?</strong>
+          </a>
+        </p>
+      ),
+    },
+  ];
+
   return (
     <>
       <div
-        className="pane background-pane"
         style={{
-          backgroundImage: `url(${Background})`,
-          justifyContent: "center",
+          backgroundImage: `url(${bg1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <h1 style={{ fontSize: "5.5vw" }}>CoopHive</h1>
-        <h2
-          style={{ marginTop: "5vw", fontSize: "3.4vw", textAlign: "center" }}
+        <LandingPrimaryTextCtaSection
+          titleComponent={<h1 className="text-4xl">Programmable Money Needs <br></br> Programmable Markets</h1>}
+          description="CoopHive is building a way for agents to trade and negotiate over anything and everything"
         >
-          Like Amazon, but for Autonomous Agents
-        </h2>
+          <div className="flex flex-row gap-2">
+            <Button asChild>
+              <a
+                href="https://alkahest.coophive.network/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
+              >
+                Read our docs
+              </a>
+            </Button>
+
+            <Button asChild variant="outline">
+              <a
+                href="https://github.com/coophive"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
+              >
+                <IoLogoGithub size="1.5em" />
+                &nbsp; See the code
+              </a>
+            </Button>
+          </div>
+        </LandingPrimaryTextCtaSection>
       </div>
-
-      <div
-        className="pane background-pane"
-        style={{
-          backgroundImage: `url(${Background2})`,
-          justifyContent: "center",
-        }}
-      >
-        <h1
-          style={{
-            alignItems: "center",
-            fontSize: "5.5vw",
-            textAlign: "center",
-          }}
-        >
-          What Are We Building?
-        </h1>
-        <div
-          className="flex-row-wrap card-container"
-          style={{ marginTop: "5vw" }}
-        >
-            <div className="card">
-              <h2 className="card-title">Primitives</h2>
-              <p className="card-content" style={{  paddingTop: "20px", marginTop: "-50px" }}>
-                Building blocks to create marketplaces that machines need to meet
-                the demands of future economic activity.
-              </p>
-            </div>
-            <div className="card">
-              <h2 className="card-title">Composable Marketplaces</h2>
-              <p className="card-content" style={{ paddingTop: "20px", marginTop: "-46px" }}>
-                With CoopHive, fragmented marketplaces like compute, storage, and
-                bandwidth can be composed seamlessly. And that's only the
-                beginning.
-              </p>
-            </div>
-            <div className="card">
-              <h2 className="card-title">Multi-Agent Systems</h2>
-              <p className="card-content" style={{ paddingTop: "20px", marginTop: "-50px" }}>
-                Autonomous agents are on the rise. The symphony of their interactions
-                will usher in the next revolution in economics.
-              </p>
-            </div>
-          </div>
-      </div>
-
-      <div
-        className="pane background-pane"
-        style={{
-          backgroundImage: `url(${Background3})`,
-          justifyContent: "center",
-        }}
-      >
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "3.618vw",
-            marginTop: "10vw",
-          }}
-        >
-          Why Are We Building It?
-        </h1>
-
-        <div className="why-card">
-          <p className="why-card-content">
-            Autonomous agents are just beginning to trade simple assets like
-            stocks or ETH. In the future, everyone will have an AI agent
-            negotiating on their behalf, trading with other agents, buying and
-            selling data, compute, and everyday items to meet their personal
-            financial goals.
-          </p>
-          <p className="why-card-content">
-            CoopHive is building the only platform that lets agents barter and
-            exchange complex combinations of goods and services on behalf of
-            their owners.
-          </p>
-          <p className="why-card-content">
-            We are starting with buying and selling compute in a distributed
-            network. We will expand to storage, bandwidth, verifiable computing,
-            off-chain compute jobs from smart contracts, RWA marketplaces,
-            tokenization of latent computing power, bridging, energy, and more.
-          </p>
-          <p className="why-card-content">
-            In the future, CoopHive will be the new Amazon that lets any agent
-            exchange goods and services to maximize the utility of the owners
-            they represent.
-          </p>
-        </div>
-
-      </div>
-
-      <div
-        className="pane background-pane"
-        style={{
-          backgroundImage: `url(${Background3})`,
-        }}
-      >
-        <h1
-          className=""
-          style={{
-            alignItems: "center",
-            fontSize: "3.618vw",
-            textAlign: "center",
-          }}
-        >
-          Want to Try?
-        </h1>
-
-        <div className="want-card">
-          <p className="want-card-content">
-            CoopHive is currently in development.
-          </p>
-          <p className="want-card-content">
-            You can test out a proof-of-concept of a distributed computing network built on the previous version of the protocol
-            <a
-              target="_blank"
-              href="https://github.com/CoopHive/dcn"
-              className="navlink"
-              style={{ textDecoration: 'underline', marginLeft: '13px', marginRight: '-20px' }}
-            >
-              here
-            </a>
-            .
-          </p>
-          <p className="want-card-content">
-            To try out the latest proof-of-concept,
-            <a
-              target="_blank"
-              href="https://alkahest.coophive.network/"
-              className="navlink"
-              style={{ textDecoration: 'underline',  marginLeft: '13px', marginRight: '-20px' }}
-            >
-              please see our docs
-            </a>
-            .
-          </p>
-        </div>
-
-      </div>
-
-      <div
-        className="pane background-pane"
-        style={{
-          backgroundImage: `url(${Background3})`,
-        }}
-      >
-        <h1
-          className=""
-          style={{
-            alignItems: "center",
-            fontSize: "5.5vw",
-            textAlign: "center",
-          }}
-        >
-          Backed By
-        </h1>
-        <div
-          className="flex-row-wrap"
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "5vw",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div
-            style={{
-              height: "161px"
-            }}
-            className="portrait-card">
-            <img
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-              }}
-            src={protocolLabsImage} alt="Protocol Labs" />
-            <h2>Incubation</h2>
-          </div>
-          <div style={{ height: "161px" }} className="portrait-card">
-            <img
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-              }}
-            src={berkeleyImage} alt="Berkeley Blockchain Xcelerator" />
-            <h2>2024 Cohort</h2>
-          </div>
-          <div style={{ height: "161px" }} className="portrait-card">
-            <img
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-              }}
-            src={orangeDaoImage} alt="Orange DAO" />
-            <h2>Summer 2024 Fellowship</h2>
-          </div>
-        </div>
-        {/*
-        <div
-          className="grid-container card-container"
-          style={{
-            marginTop: "5vw",
-          }}
-        >
-          <div className="grid-item">
-            <img src={protocolLabsImage} alt="Protocol Labs" />
-          </div>
-          <div className="grid-item">
-            <img src={berkeleyImage} alt="Berkeley Blockchain Xcelerator" />
-          </div>
-          <div className="grid-item">
-            <img src={orangeDaoImage} alt="Orange DAO" />
-          </div>
-          <div className="grid-item">
-            <h2 className="card-title" style={{ fontSize: "3em" }}>
-              Incubation
-            </h2>
-            <p className="card-content"></p>
-          </div>
-          <div className="grid-item">
-            <h2 className="card-title" style={{ fontSize: "3em" }}>
-              2024 Cohort
-            </h2>
-            <p className="card-content"></p>
-          </div>
-          <div className="grid-item">
-            <h2 className="card-title" style={{ fontSize: "3em" }}>
-              Summer 2024 Fellowship
-            </h2>
-            <p className="card-content"></p>
-          </div>
-        </div>
-        */}
-      </div>
+      <LandingFeatureList title="What is It?" featureItems={featureItems} />
+      <LandingBandSection
+        title="Want to Try?"
+        supportingComponent={
+          <>
+            <p>
+              CoopHive is currently in development. <br />
+              <br />
+              You can test out a proof-of-concept of a distributed computing
+              network built on the previous version of the protocol{" "}
+              <a
+                className="hover:underline "
+                href="https://github.com/CoopHive/dcn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>here</strong>
+              </a>
+              . <br />
+              <br />
+              To try out the latest proof-of-concept,{" "}
+              <a
+                className="hover:underline"
+                href="https://alkahest.coophive.network"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong> please see our docs</strong>
+              </a>
+              . <br />
+            </p>
+          </>
+        }
+      />
+      <LandingPrimaryTextCtaSection title="Backed By" />
+      <BackedBy />
     </>
   );
-};
+}
+
+function BackedBy() {
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+      <div className="flex flex-col lg:flex-row justify-between items-stretch w-full max-w-7xl gap-8">
+        {[
+          {
+            name: "Protocol Labs",
+            img: protocolLabsImage,
+            desc: "Incubation",
+          },
+          {
+            name: "Berkeley Blockchain Xcelerator",
+            img: bbxImage,
+            desc: "2024 Cohort",
+          },
+          {
+            name: "OrangeDAO",
+            img: orangeDaoImage,
+            desc: "Summer 2024 Fellowship",
+          },
+        ].map((org, index) => (
+          <div key={index} className="flex flex-col items-center lg:w-1/3">
+            <div className="flex-grow flex items-center justify-center mb-4 lg:mb-8">
+              <img src={org.img} alt={org.name} className="max-w-full h-auto" />
+            </div>
+            <div className="text-center">{org.desc}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

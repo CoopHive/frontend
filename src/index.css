@@ -1,247 +1,175 @@
-@font-face {
-  font-family: "IBMPlexMono-SemiBold";
-  src: local("IBMPlexMono-SemiBold"),
-    url("./assets/fonts/IBMPlexMono/IBMPlexMono-SemiBold.ttf");
-}
-@font-face {
-  font-family: "IBMPlexMono-Italic";
-  src: local("IBMPlexMono-Italic"),
-    url("./assets/fonts/IBMPlexMono/IBMPlexMono-Italic.ttf");
-}
-@font-face {
-  font-family: "IBMPlexMono-LightItalic";
-  src: local("IBMPlexMono-LightItalic"),
-    url("./assets/fonts/IBMPlexMono/IBMPlexMono-LightItalic.ttf");
-}
-@font-face {
-  font-family: "IBMPlexMono-Regular";
-  src: local("IBMPlexMono-Regular"),
-    url("./assets/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf");
-}
-@font-face {
-  font-family: "IBMPlexMono-Thin";
-  src: local("IBMPlexMono-Thin"),
-    url("./assets/fonts/IBMPlexMono/IBMPlexMono-Thin.ttf");
-}
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap"); /* Optional: import any Google font from https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  font-family: IBMPlexMono-Regular, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: #0a1818;
-  background: linear-gradient(#f5e8e8, #f9f1f1);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #0a1818;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #070e0e;
-}
-
-h1 {
-  font-family: IBMPlexMono-Italic, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-}
-
-h2 {
-  font-family: IBMPlexMono-LightItalic, Inter, system-ui, Avenir, Helvetica,
-    Arial, sans-serif;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --font-space-default: "IBM Plex Mono";
+    --font-space-display: "IBM Plex Sans";
+    --hard-shadow: 0px 29px 52px 0px rgba(0, 0, 0, 0.4),
+      22px 25px 16px 0px rgba(0, 0, 0, 0.2);
+    --hard-shadow-left: 0px 29px 52px 0px rgba(0, 0, 0, 0.4),
+      -22px 25px 16px 0px rgba(0, 0, 0, 0.2);
+    /* If you use Shadcn UI already, you should already have these variables defined */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --radius: 0.5rem;
+    --primary-lighter-hex: theme("colors.primary.200");
+    --secondary-lighter-hex: theme("colors.secondary.200");
+    --primary-dark-hex: theme("colors.primary.800");
+    --secondary-dark-hex: theme("colors.secondary.800");
+    --primary: 0 0% 9%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
-  a:hover {
-    color: #747bff;
+
+  .dark {
+    /* If you use Shadcn UI already, you can skip this block. */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --primary: 0 0% 98%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
-  button {
-    background-color: #f9f9f9;
+
+  *,
+  ::before,
+  ::after {
+    @apply border-gray-100 dark:border-neutral-800;
+  }
+
+  * {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold font-display;
   }
 }
 
-.background-pane {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0px 0px 3vh 3vh #f5e8e8 inset;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /**
+   * Perspective (used for images etc.)
+   */
+  .perspective-none {
+    transform: none;
+  }
+
+  .perspective-left {
+    box-shadow: var(--hard-shadow);
+    transform: perspective(400em) rotateY(-15deg) rotateX(6deg)
+      skew(-8deg, 4deg) translate3d(-4%, -2%, 0) scale(0.8);
+  }
+
+  .perspective-right {
+    box-shadow: var(--hard-shadow-left);
+    transform: perspective(400em) rotateY(15deg) rotateX(6deg) skew(8deg, -4deg)
+      translate3d(4%, -2%, 0) scale(0.8);
+  }
+
+  .perspective-bottom {
+    box-shadow: var(--hard-shadow);
+    transform: translateY(-4%) perspective(400em) rotateX(18deg) scale(0.9);
+  }
+
+  .perspective-bottom-lg {
+    box-shadow: var(--hard-shadow);
+    transform: perspective(400em) translate3d(0, -6%, 0) rotateX(34deg)
+      scale(0.8);
+  }
+
+  .perspective-paper {
+    box-shadow: var(--hard-shadow);
+    transform: rotateX(40deg) rotate(40deg) scale(0.8);
+  }
+
+  .perspective-paper-left {
+    box-shadow: var(--hard-shadow-left);
+    transform: rotateX(40deg) rotate(-40deg) scale(0.8);
+  }
+
+  /**
+   * Custom shadows
+   */
+  .hard-shadow {
+    box-shadow: var(--hard-shadow);
+  }
+
+  .hard-shadow-left {
+    box-shadow: var(--hard-shadow-left);
+  }
+
+  /**
+   * Container utilities
+   */
+  .container-narrow {
+    @apply max-w-4xl;
+  }
+
+  .container-wide {
+    @apply xl:max-w-6xl;
+  }
+
+  .container-ultrawide {
+    @apply xl:max-w-7xl;
+  }
 }
 
-.flex-row-wrap {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.navbar {
-  backdrop-filter: blur(2.1vw);
-}
-
-.navlink {
-  padding-right: 1.25rem;
-}
-
-.pane {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  min-height: 875px;
-  box-sizing: border-box;
-}
-
-.card-container {
-  justify-content: center;
-  width: 94.4vw;
-  flex-shrink: 0;
-}
-
-.card {
-  width: 425px;
-  height: 261px;
-  background-color: rgba(0, 0, 0, 0.055);
-  backdrop-filter: blur(9px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1vw 1vw;
-}
-
-.why-card {
-  width: 95%;
-  aspect-ratio: 2 / 1;
-  background-color: rgba(0, 0, 0, 0.055);
-  backdrop-filter: blur(9px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1vw 1vw;
-}
-
-.want-card {
-  width: 95%;
-  aspect-ratio: 5 / 1;
-  background-color: rgba(0, 0, 0, 0.055);
-  backdrop-filter: blur(9px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1vw 1vw;
-}
-
-.card-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 38.2%;
-  width: 85.4%;
-}
-
-.card-content {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  height: 61.8%;
-  width: 85.4%;
-}
-
-.why-card-content {
-  font-size: 1.5vw;
-  align-items: left;
-  text-align: left;
-  width: 85.4%;
-  margin-bottom: 1em;
-}
-
-.why-card-content:last-of-type {
-  margin-bottom: 0;
-}
-
-.want-card-content {
-  font-size: 1.5vw;
-  align-items: left;
-  text-align: left;
-  width: 85.4%;
-  margin-bottom: 1em;
-}
-
-.want-card-content:last-of-type {
-  margin-bottom: 0;
-}
-
-.portrait-card {
-  width: 425px;
-  height: 685px;
-  background-color: rgba(0, 0, 0, 0.055);
-  backdrop-filter: blur(9px);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  margin: 1vw 1vw;
-}
-
-.section-content p {
-  margin-bottom: 1em;
-}
-
-.grid-container {
-  display: flex;
-  column-gap: 200px;
-  row-gap: 0px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.grid-item {
-  padding: 0px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-.content {
-  max-width: 100%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
