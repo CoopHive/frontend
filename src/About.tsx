@@ -77,11 +77,6 @@ export default function About() {
           imageSrc={yang}
         />
         <LandingProductFeature
-          title="Taylor Hulsmans - Engineer"
-          description="Prev at Molecule, Sigmadex, HedgeTrade. OSS contributor @ IPFS, Filecoin, various DeSci projects"
-          imageSrc={taylor}
-        />
-        <LandingProductFeature
           title="Matteo Manzi - Researcher"
           description="Financial Machine Learning Quantitative Researcher. MSc Aerospace Engineer @ TU Delft. Prev CrunchDAO, European Space Agency, Marie Skłodowska-Curie Research Network"
           imageSrc={matteo}
