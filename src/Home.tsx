@@ -110,83 +110,84 @@ export default function Home() {
 		},
 	];
 
-  return (
-    <>
-      <div
-        style={{
-          backgroundImage: `url(${bg1})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <LandingPrimaryTextCtaSection
-          titleComponent={<h1 className="text-4xl">Programmable Money Needs <br></br> Programmable Markets</h1>}
-          description="CoopHive is building a way for agents to trade and negotiate over anything and everything"
-        >
-          <div className="flex flex-row gap-2">
-            <Button asChild>
-              <a
-                href="https://alkahest.coophive.network/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
-              >
-                Read our docs
-              </a>
-            </Button>
+	return (
+		<>
+			<div
+				style={{
+					backgroundImage: `url(${bg1})`,
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}
+			>
+				<LandingPrimaryTextCtaSection
+					titleComponent={
+						<h1 className="text-4xl">
+							Programmable Money Needs <br /> Programmable Markets
+						</h1>
+					}
+					description="CoopHive is building a way for agents to trade and negotiate over anything and everything"
+				>
+					<div className="flex flex-row gap-2">
+						<Button asChild>
+							<a
+								href="https://alkahest.coophive.network/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
+							>
+								Read our docs
+							</a>
+						</Button>
 
-            <Button asChild variant="outline">
-              <a
-                href="https://github.com/coophive"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
-              >
-                <IoLogoGithub size="1.5em" />
-                &nbsp; See the code
-              </a>
-            </Button>
-          </div>
-        </LandingPrimaryTextCtaSection>
-      </div>
-      <LandingFeatureList title="What is It?" featureItems={featureItems} />
-      <LandingBandSection
-        title="Want to Try?"
-        supportingComponent={
-          <>
-            <p>
-              CoopHive is currently in development. <br />
-              <br />
-              You can test out a proof-of-concept of a distributed computing
-              network built on the previous version of the protocol{" "}
-              <a
-                className="hover:underline "
-                href="https://github.com/CoopHive/dcn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>here</strong>
-              </a>
-              . <br />
-              <br />
-              To try out the latest proof-of-concept,{" "}
-              <a
-                className="hover:underline"
-                href="https://alkahest.coophive.network"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong> please see our docs</strong>
-              </a>
-              . <br />
-            </p>
-          </>
-        }
-      />
-      <LandingPrimaryTextCtaSection title="Backed By" />
-      <BackedBy />
-    </>
-  );
+						<Button asChild variant="outline">
+							<a
+								href="https://github.com/coophive"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium"
+							>
+								<IoLogoGithub size="1.5em" />
+								&nbsp; See the code
+							</a>
+						</Button>
+					</div>
+				</LandingPrimaryTextCtaSection>
+			</div>
+			<LandingFeatureList title="What is It?" featureItems={featureItems} />
+			<LandingBandSection
+				title="Want to Try?"
+				supportingComponent=<p>
+					CoopHive is currently in development. <br />
+					<br />
+					You can test out a proof-of-concept of a distributed computing network
+					built on the previous version of the protocol{" "}
+					<a
+						className="hover:underline "
+						href="https://github.com/CoopHive/dcn"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<strong>here</strong>
+					</a>
+					. <br />
+					<br />
+					To try out the latest proof-of-concept,{" "}
+					<a
+						className="hover:underline"
+						href="https://alkahest.coophive.network"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<strong>please see our docs</strong>
+					</a>
+					. <br />
+				</p>
+			/>
+			<LandingPrimaryTextCtaSection title="Backed By" />
+			<BackedBy />
+			<div className="h-24" />
+		</>
+	);
 }
 
 function BackedBy() {
