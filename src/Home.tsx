@@ -1,8 +1,7 @@
 import { LandingPrimaryTextCtaSection } from "@/components/landing/cta/LandingPrimaryCta";
-import { Bot, Component, Github, Link } from "lucide-react";
+import { Bot, Component, Link } from "lucide-react";
 import { LandingFeatureList } from "./components/landing/feature/LandingFeatureList";
 import { LandingBandSection } from "./components/landing/LandingBand";
-import { LandingFaqCollapsibleSection } from "./components/landing/LandingFaqCollapsible";
 
 import bbxImage from "./assets/berkeley_blockchain_xcelerator.png";
 import orangeDaoImage from "./assets/orange_dao.png";
@@ -11,7 +10,6 @@ import { Button } from "./components/shared/ui/button";
 import { IoLogoGithub } from "react-icons/io5";
 
 import bg1 from "./assets/bg1.png";
-import bg2 from "./assets/bg2.png";
 
 export default function Home() {
   const featureItems = [
