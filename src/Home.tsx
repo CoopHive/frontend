@@ -185,7 +185,6 @@ export default function Home() {
 			/>
 			<LandingPrimaryTextCtaSection title="Backed By" />
 			<BackedBy />
-			<div className="h-24" />
 		</>
 	);
 }
