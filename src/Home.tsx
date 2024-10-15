@@ -191,34 +191,34 @@ export default function Home() {
 }
 
 function BackedBy() {
-  return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <div className="flex flex-col lg:flex-row justify-between items-stretch w-full max-w-7xl gap-8">
-        {[
-          {
-            name: "Protocol Labs",
-            img: protocolLabsImage,
-            desc: "Incubation",
-          },
-          {
-            name: "Berkeley Blockchain Xcelerator",
-            img: bbxImage,
-            desc: "2024 Cohort",
-          },
-          {
-            name: "OrangeDAO",
-            img: orangeDaoImage,
-            desc: "Summer 2024 Fellowship",
-          },
-        ].map((org, index) => (
-          <div key={index} className="flex flex-col items-center lg:w-1/3">
-            <div className="flex-grow flex items-center justify-center mb-4 lg:mb-8">
-              <img src={org.img} alt={org.name} className="max-w-full h-auto" />
-            </div>
-            <div className="text-center">{org.desc}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+	return (
+		<div className="flex justify-center items-center p-4">
+			<div className="flex flex-col lg:flex-row justify-between items-stretch w-full max-w-7xl gap-8">
+				{[
+					{
+						name: "Protocol Labs",
+						img: protocolLabsImage,
+						desc: "Incubation",
+					},
+					{
+						name: "Berkeley Blockchain Xcelerator",
+						img: bbxImage,
+						desc: "2024 Cohort",
+					},
+					{
+						name: "OrangeDAO",
+						img: orangeDaoImage,
+						desc: "Summer 2024 Fellowship",
+					},
+				].map((org) => (
+					<div key={org.name} className="flex flex-col items-center lg:w-1/3">
+						<div className="flex-grow flex items-center justify-center mb-4 lg:mb-8">
+							<img src={org.img} alt={org.name} className="max-w-full h-auto" />
+						</div>
+						<div className="text-center">{org.desc}</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
 }
