@@ -12,100 +12,103 @@ import { IoLogoGithub } from "react-icons/io5";
 import bg1 from "./assets/bg1.png";
 
 export default function Home() {
-  const featureItems = [
-    {
-      icon: <Component />,
-      title: "Primitives",
-      description:
-        "Building blocks to create marketplaces that machines need to meet the demands of future economic activity.",
-    },
-    {
-      icon: <Link />,
-      title: "Composable Marketplaces",
-      description:
-        "With CoopHive, fragmented marketplaces like compute, storage, and bandwidth can be composed seamlessly. ",
-    },
-    {
-      icon: <Bot />,
-      title: "Multi-Agent Systems",
-      description:
-        "Autonomous agents are on the rise. The symphony of their interactions will usher in the next revolution in economics.",
-    },
-  ];
+	const featureItems = [
+		{
+			icon: <Component />,
+			title: "Primitives",
+			description:
+				"Building blocks to create marketplaces that machines need to meet the demands of future economic activity.",
+		},
+		{
+			icon: <Link />,
+			title: "Composable Marketplaces",
+			description:
+				"With CoopHive, fragmented marketplaces like compute, storage, and bandwidth can be composed seamlessly. ",
+		},
+		{
+			icon: <Bot />,
+			title: "Multi-Agent Systems",
+			description:
+				"Autonomous agents are on the rise. The symphony of their interactions will usher in the next revolution in economics.",
+		},
+	];
 
-  const faqItems = [
-    {
-      question: "Why is this needed?",
-      answer: (
-        <p>
-          Autonomous agents are just beginning to trade simple assets like
-          stocks or ETH. In the future, everyone will have an AI agent
-          negotiating on their behalf, trading with other agents, buying and
-          selling data, compute, and everyday items to meet their personal
-          financial goals. <br />
-          <br />
-          CoopHive is building the only platform that lets agents barter and
-          exchange complex combinations of goods and services on behalf of their
-          owners. <br />
-          <br />
-          We are starting with buying and selling compute in a distributed
-          network. We will expand to storage, bandwidth, verifiable computing,
-          off-chain compute jobs from smart contracts, RWA marketplaces,
-          tokenization of latent computing power, bridging, energy, and more.{" "}
-          <br />
-          <br />
-          In the future, CoopHive will be the new Amazon that lets any agent
-          exchange goods and services to maximize the utility of the owners they
-          represent.
-        </p>
-      ),
-    },
-    {
-      question: "Why build on EAS?",
-      answer: (
-        <p>
-          See{" "}
-          <a
-            className="hover:underline"
-            href="https://alkahest.coophive.network/Asides.html#why-eas"
-            target="_blank"
-          >
-            <strong>Why EAS?</strong>
-          </a>
-        </p>
-      ),
-    },
-    {
-      question: "Why not tokenize everything?",
-      answer: (
-        <p>
-          See{" "}
-          <a
-            className="hover:underline"
-            href="https://alkahest.coophive.network/Asides.html#why-not-tokens"
-            target="_blank"
-          >
-            <strong>Why Not Tokens?</strong>
-          </a>
-        </p>
-      ),
-    },
-    {
-      question: "How do we improve upon existing DePIN protocols?",
-      answer: (
-        <p>
-          See{" "}
-          <a
-            className="hover:underline"
-            href="https://alkahest.coophive.network/Asides.html#why-not-specialized-networks"
-            target="_blank"
-          >
-            <strong>Why Not Specialized Networks?</strong>
-          </a>
-        </p>
-      ),
-    },
-  ];
+	const faqItems = [
+		{
+			question: "Why is this needed?",
+			answer: (
+				<p>
+					Autonomous agents are just beginning to trade simple assets like
+					stocks or ETH. In the future, everyone will have an AI agent
+					negotiating on their behalf, trading with other agents, buying and
+					selling data, compute, and everyday items to meet their personal
+					financial goals. <br />
+					<br />
+					CoopHive is building the only platform that lets agents barter and
+					exchange complex combinations of goods and services on behalf of their
+					owners. <br />
+					<br />
+					We are starting with buying and selling compute in a distributed
+					network. We will expand to storage, bandwidth, verifiable computing,
+					off-chain compute jobs from smart contracts, RWA marketplaces,
+					tokenization of latent computing power, bridging, energy, and more.{" "}
+					<br />
+					<br />
+					In the future, CoopHive will be the new Amazon that lets any agent
+					exchange goods and services to maximize the utility of the owners they
+					represent.
+				</p>
+			),
+		},
+		{
+			question: "Why build on EAS?",
+			answer: (
+				<p>
+					See{" "}
+					<a
+						className="hover:underline"
+						href="https://alkahest.coophive.network/Asides.html#why-eas"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<strong>Why EAS?</strong>
+					</a>
+				</p>
+			),
+		},
+		{
+			question: "Why not tokenize everything?",
+			answer: (
+				<p>
+					See{" "}
+					<a
+						className="hover:underline"
+						href="https://alkahest.coophive.network/Asides.html#why-not-tokens"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<strong>Why Not Tokens?</strong>
+					</a>
+				</p>
+			),
+		},
+		{
+			question: "How do we improve upon existing DePIN protocols?",
+			answer: (
+				<p>
+					See{" "}
+					<a
+						className="hover:underline"
+						href="https://alkahest.coophive.network/Asides.html#why-not-specialized-networks"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<strong>Why Not Specialized Networks?</strong>
+					</a>
+				</p>
+			),
+		},
+	];
 
   return (
     <>
