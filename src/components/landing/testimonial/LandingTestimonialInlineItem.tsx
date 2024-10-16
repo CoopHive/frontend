@@ -1,6 +1,6 @@
-import { LandingRating } from '@/components/landing/rating/LandingRating';
-import { LandingAvatar } from '@/components/landing/social-proof/LandingAvatar';
-import { clsx } from 'clsx';
+import { LandingRating } from "@/components/landing/rating/LandingRating";
+import { LandingAvatar } from "@/components/landing/social-proof/LandingAvatar";
+import { clsx } from "clsx";
 
 /**
  * Use this component to display a single testimonial inline. Use this to highlight short customer testimonials or reviews. are meant as short validation and are usually support for a primary or secondary Call to action.
@@ -21,7 +21,7 @@ export const LandingTestimonialInlineItem = ({
   suffix?: string;
 }) => {
   return (
-    <div className={clsx('flex flex-col lg:text-center', className)}>
+    <div className={clsx("flex flex-col lg:text-center", className)}>
       <div className="flex gap-2 items-center lg:justify-center">
         {imageSrc ? (
           <div className="opacity-90 flex-shrink-0">
@@ -45,7 +45,7 @@ export const LandingTestimonialInlineItem = ({
 
           <p
             className="w-full text-gray-500 truncate"
-            title={`${name}${suffix ? `, ${suffix}` : ''}`}
+            title={`${name}${suffix ? `, ${suffix}` : ""}`}
           >
             <b>{name}</b>
             {suffix ? <>, {suffix}</> : null}

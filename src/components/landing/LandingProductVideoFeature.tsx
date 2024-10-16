@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import { VideoPlayer } from '@/components/shared/VideoPlayer';
-import { GlowBg } from '@/components/shared/ui/glow-bg';
+import { VideoPlayer } from "@/components/shared/VideoPlayer";
+import { GlowBg } from "@/components/shared/ui/glow-bg";
+import clsx from "clsx";
 
 /**
  * A component meant to be used in the landing page.
@@ -17,11 +17,11 @@ export const LandingProductVideoFeature = ({
   titleComponent,
   description,
   descriptionComponent,
-  textPosition = 'left',
+  textPosition = "left",
   videoSrc,
   videoPoster,
-  videoPosition = 'right',
-  videoMaxWidth = 'none',
+  videoPosition = "right",
+  videoMaxWidth = "none",
   autoPlay,
   muted = true,
   controls = false,
@@ -30,7 +30,7 @@ export const LandingProductVideoFeature = ({
   minHeight = 350,
   withBackground = false,
   withBackgroundGlow = false,
-  variant = 'primary',
+  variant = "primary",
   backgroundGlowVariant,
 }: {
   children?: React.ReactNode;
@@ -40,10 +40,10 @@ export const LandingProductVideoFeature = ({
   titleComponent?: React.ReactNode;
   description?: string | React.ReactNode;
   descriptionComponent?: React.ReactNode;
-  textPosition?: 'center' | 'left';
+  textPosition?: "center" | "left";
   videoSrc?: string;
   videoPoster?: string;
-  videoPosition?: 'left' | 'right' | 'center';
+  videoPosition?: "left" | "right" | "center";
   videoMaxWidth?: string;
   autoPlay?: boolean;
   muted?: boolean;
@@ -53,30 +53,30 @@ export const LandingProductVideoFeature = ({
   minHeight?: number;
   withBackground?: boolean;
   withBackgroundGlow?: boolean;
-  variant?: 'primary' | 'secondary';
-  backgroundGlowVariant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
+  backgroundGlowVariant?: "primary" | "secondary";
 }) => {
   return (
     <section
       className={clsx(
-        'w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-900/10'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-900/10'
-          : '',
-        withBackgroundGlow ? 'overflow-hidden' : '',
+        "w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-900/10"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-900/10"
+          : "",
+        withBackgroundGlow ? "overflow-hidden" : "",
         className,
       )}
     >
       <div
         className={clsx(
-          'w-full p-6 flex flex-col items-center relative',
-          videoPosition === 'center'
-            ? 'container-narrow'
-            : 'max-w-full container-ultrawide grid lg:grid-cols-12 gap-8 lg:gap-16',
-          textPosition === 'center' ? 'items-center' : 'items-start',
+          "w-full p-6 flex flex-col items-center relative",
+          videoPosition === "center"
+            ? "container-narrow"
+            : "max-w-full container-ultrawide grid lg:grid-cols-12 gap-8 lg:gap-16",
+          textPosition === "center" ? "items-center" : "items-start",
           innerClassName,
         )}
         style={{
@@ -85,11 +85,11 @@ export const LandingProductVideoFeature = ({
       >
         <div
           className={clsx(
-            'flex flex-col gap-4 lg:col-span-5',
-            videoPosition === 'left' && 'lg:col-start-8 lg:row-start-1',
-            textPosition === 'center'
-              ? 'md:max-w-lg items-center text-center'
-              : 'items-start',
+            "flex flex-col gap-4 lg:col-span-5",
+            videoPosition === "left" && "lg:col-start-8 lg:row-start-1",
+            textPosition === "center"
+              ? "md:max-w-lg items-center text-center"
+              : "items-start",
           )}
         >
           {title ? (
@@ -110,7 +110,7 @@ export const LandingProductVideoFeature = ({
         {withBackgroundGlow ? (
           <div className="hidden lg:flex justify-center w-full h-full absolute pointer-events-none">
             <GlowBg
-              className={clsx('w-full lg:w-1/2 h-auto z-0')}
+              className={clsx("w-full lg:w-1/2 h-auto z-0")}
               variant={backgroundGlowVariant}
             />
           </div>
@@ -118,12 +118,12 @@ export const LandingProductVideoFeature = ({
 
         {videoSrc ? (
           <>
-            {videoPosition === 'center' ? (
+            {videoPosition === "center" ? (
               <section className="w-full mt-auto pt-6 md:pt-8">
                 <VideoPlayer
                   className={clsx(
-                    'w-full rounded-md lg:col-span-7',
-                    zoomOnHover ? 'hover:scale-110 transition-all' : '',
+                    "w-full rounded-md lg:col-span-7",
+                    zoomOnHover ? "hover:scale-110 transition-all" : "",
                   )}
                   poster={videoPoster}
                   src={videoSrc}
@@ -137,11 +137,11 @@ export const LandingProductVideoFeature = ({
               </section>
             ) : null}
 
-            {videoPosition === 'left' || videoPosition === 'right' ? (
+            {videoPosition === "left" || videoPosition === "right" ? (
               <VideoPlayer
                 className={clsx(
-                  'w-full rounded-md lg:col-span-7',
-                  zoomOnHover ? 'hover:scale-110 transition-all' : '',
+                  "w-full rounded-md lg:col-span-7",
+                  zoomOnHover ? "hover:scale-110 transition-all" : "",
                 )}
                 poster={videoPoster}
                 src={videoSrc}

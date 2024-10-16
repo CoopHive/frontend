@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import { BadgeCheck } from 'lucide-react';
-import Image from '@/components/shared/Image';
+import Image from "@/components/shared/Image";
+import clsx from "clsx";
+import { BadgeCheck } from "lucide-react";
 
 export interface TestimonialItem {
   className?: string;
@@ -11,7 +11,7 @@ export interface TestimonialItem {
   handle: string;
   featured?: boolean;
   verified?: boolean;
-  size?: 'full' | 'half' | 'third'; // NB: Only applies to testimonials in a list, not grid.
+  size?: "full" | "half" | "third"; // NB: Only applies to testimonials in a list, not grid.
 }
 
 /**
@@ -29,7 +29,7 @@ export const LandingTestimonial = ({
   featured,
   verified = true,
 }: TestimonialItem) => {
-  const missingUrl = !url || url === '#';
+  const missingUrl = !url || url === "#";
 
   return (
     <a
@@ -37,21 +37,21 @@ export const LandingTestimonial = ({
       target="_blank"
       rel="noopener noreferrer"
       className={clsx(
-        'w-full inline-block bg-white dark:bg-neutral-900 rounded-2xl shadow-md ring-1 ring-gray-900/5',
-        featured ? 'shadow-xl' : 'p-6',
+        "w-full inline-block bg-white dark:bg-neutral-900 rounded-2xl shadow-md ring-1 ring-gray-900/5",
+        featured ? "shadow-xl" : "p-6",
         missingUrl
-          ? 'cursor-default pointer-events-none'
-          : 'cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors',
+          ? "cursor-default pointer-events-none"
+          : "cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors",
         className,
       )}
     >
       <figure>
         <blockquote
           className={clsx(
-            'text-gray-900 dark:text-gray-100',
+            "text-gray-900 dark:text-gray-100",
             featured
-              ? 'p-6 text-lg font-semibold leading-7 tracking-tight sm:text-xl sm:leading-8'
-              : '',
+              ? "p-6 text-lg font-semibold leading-7 tracking-tight sm:text-xl sm:leading-8"
+              : "",
           )}
         >
           <p className="whitespace-pre-line">{`“${text}”`}</p>
@@ -59,10 +59,10 @@ export const LandingTestimonial = ({
 
         <figcaption
           className={clsx(
-            'flex items-center gap-x-4',
+            "flex items-center gap-x-4",
             featured
-              ? 'flex-wrap gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap'
-              : 'mt-6',
+              ? "flex-wrap gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap"
+              : "mt-6",
           )}
         >
           <Image
@@ -74,7 +74,7 @@ export const LandingTestimonial = ({
           />
           <div className="flex-auto">
             <div className="font-semibold flex gap-0.5 items-center">
-              {name}{' '}
+              {name}{" "}
               {verified && (
                 <BadgeCheck className="flex-shrink-0 fill-blue-500 text-white w-4 h-4" />
               )}

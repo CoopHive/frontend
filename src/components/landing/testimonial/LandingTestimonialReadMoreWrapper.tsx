@@ -1,5 +1,5 @@
-'use client';
-import { LandingReadMoreWrapper } from '@/components/landing/LandingReadMoreWrapper';
+"use client";
+import { LandingReadMoreWrapper } from "@/components/landing/LandingReadMoreWrapper";
 
 /**
  * Wraps the testimonial section in the landing page, and adds a "Read more" button (truncates to the given height).
@@ -7,13 +7,13 @@ import { LandingReadMoreWrapper } from '@/components/landing/LandingReadMoreWrap
 export const LandingTestimonialReadMoreWrapper = ({
   children,
   className,
-  size = 'lg',
-  variant = 'primary',
+  size = "lg",
+  variant = "primary",
 }: {
   children: React.ReactNode;
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'primary' | 'secondary';
+  size?: "sm" | "md" | "lg";
+  variant?: "primary" | "secondary";
 }) => {
   return (
     <LandingReadMoreWrapper

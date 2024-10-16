@@ -1,6 +1,6 @@
-'use client';
-import clsx from 'clsx';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import clsx from "clsx";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * A component meant to be used in the landing page.
@@ -13,19 +13,19 @@ export const LandingMarquee = ({
   withBackground = false,
   animationDurationInSeconds,
   animationDirection,
-  variant = 'primary',
+  variant = "primary",
 }: {
   className?: string;
   innerClassName?: string;
   children?: React.ReactNode;
   withBackground?: boolean;
   animationDurationInSeconds?: number;
-  animationDirection?: 'left' | 'right';
-  variant?: 'primary' | 'secondary';
+  animationDirection?: "left" | "right";
+  variant?: "primary" | "secondary";
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [repeat, setRepeat] = useState(3); // Initial value, can be adjusted
-  const [_animationDuration, _setAnimationDuration] = useState('15s'); // Initial value
+  const [_animationDuration, _setAnimationDuration] = useState("15s"); // Initial value
 
   useEffect(() => {
     const updateRepeatCount = () => {
@@ -49,28 +49,28 @@ export const LandingMarquee = ({
     };
 
     updateRepeatCount();
-    window.addEventListener('resize', updateRepeatCount);
-    return () => window.removeEventListener('resize', updateRepeatCount);
+    window.addEventListener("resize", updateRepeatCount);
+    return () => window.removeEventListener("resize", updateRepeatCount);
   }, [animationDurationInSeconds]);
 
   return (
     <div
       className={clsx(
-        'w-full overflow-hidden flex items-center py-4 lg:py-8',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-900/10'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-900/10'
-          : '',
+        "w-full overflow-hidden flex items-center py-4 lg:py-8",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-900/10"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-900/10"
+          : "",
         className,
       )}
       ref={containerRef}
     >
       <div
         className={clsx(
-          'flex animate-marquee',
-          animationDirection === 'left' ? 'direction-reverse' : '',
+          "flex animate-marquee",
+          animationDirection === "left" ? "direction-reverse" : "",
           innerClassName,
         )}
         style={{

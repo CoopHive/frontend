@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import { TestimonialItem } from '@/components/landing/testimonial/LandingTestimonial';
-import { LandingTestimonial } from '@/components/landing/testimonial/LandingTestimonial';
+import type { TestimonialItem } from "@/components/landing/testimonial/LandingTestimonial";
+import { LandingTestimonial } from "@/components/landing/testimonial/LandingTestimonial";
+import clsx from "clsx";
 
 /**
  * Use this component to display a grid of testimonials.
@@ -20,9 +20,9 @@ export const LandingTestimonialGrid = ({
   testimonialItems,
   featuredTestimonial,
   withBackground,
-  variant = 'primary',
+  variant = "primary",
   withBackgroundGlow = false,
-  backgroundGlowVariant = 'primary',
+  backgroundGlowVariant = "primary",
 }: {
   className?: string;
   containerClassName?: string;
@@ -33,21 +33,21 @@ export const LandingTestimonialGrid = ({
   testimonialItems: Array<TestimonialItem>;
   featuredTestimonial?: TestimonialItem;
   withBackground?: boolean;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
   withBackgroundGlow?: boolean;
-  backgroundGlowVariant?: 'primary' | 'secondary';
+  backgroundGlowVariant?: "primary" | "secondary";
 }) => {
   return (
     <section
       className={clsx(
-        'w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-900/10'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-900/10'
-          : '',
-        withBackgroundGlow ? 'overflow-hidden' : '',
+        "w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-900/10"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-900/10"
+          : "",
+        withBackgroundGlow ? "overflow-hidden" : "",
         className,
       )}
     >
@@ -76,17 +76,17 @@ export const LandingTestimonialGrid = ({
             >
               <div
                 className={clsx(
-                  'ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr',
-                  backgroundGlowVariant === 'primary'
-                    ? 'from-primary-100 to-primary-200'
-                    : '',
-                  backgroundGlowVariant === 'secondary'
-                    ? 'from-secondary-100 to-secondary-200'
-                    : '',
+                  "ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr",
+                  backgroundGlowVariant === "primary"
+                    ? "from-primary-100 to-primary-200"
+                    : "",
+                  backgroundGlowVariant === "secondary"
+                    ? "from-secondary-100 to-secondary-200"
+                    : "",
                 )}
                 style={{
                   clipPath:
-                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
                 }}
               />
             </div>
@@ -96,17 +96,17 @@ export const LandingTestimonialGrid = ({
             >
               <div
                 className={clsx(
-                  'ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr xl:ml-0 xl:mr-[calc(50%-12rem)]',
-                  backgroundGlowVariant === 'primary'
-                    ? 'from-primary-100 to-primary-200'
-                    : '',
-                  backgroundGlowVariant === 'secondary'
-                    ? 'from-secondary-100 to-secondary-200'
-                    : '',
+                  "ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr xl:ml-0 xl:mr-[calc(50%-12rem)]",
+                  backgroundGlowVariant === "primary"
+                    ? "from-primary-100 to-primary-200"
+                    : "",
+                  backgroundGlowVariant === "secondary"
+                    ? "from-secondary-100 to-secondary-200"
+                    : "",
                 )}
                 style={{
                   clipPath:
-                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
                 }}
               />
             </div>
@@ -116,7 +116,7 @@ export const LandingTestimonialGrid = ({
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             className={clsx(
-              'mx-auto max-w-2xl xl:mx-0 xl:max-w-none text-sm leading-6 text-gray-900 dark:text-gray-100 columns-1 md:columns-2 xl:columns-3 gap-4',
+              "mx-auto max-w-2xl xl:mx-0 xl:max-w-none text-sm leading-6 text-gray-900 dark:text-gray-100 columns-1 md:columns-2 xl:columns-3 gap-4",
               containerClassName,
             )}
           >
