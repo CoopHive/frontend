@@ -1,7 +1,7 @@
 import { LandingProductFeature } from "@/components/landing/LandingProductFeature";
 import { LandingProductVideoFeature } from "@/components/landing/LandingProductVideoFeature";
 import clsx from "clsx";
-import { Children, ReactElement, cloneElement } from "react";
+import { Children, type ReactElement, cloneElement } from "react";
 
 type Child = ReactElement<any, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
 
@@ -44,13 +44,13 @@ export const LandingProductFeaturesGrid = ({
 
     return cloneElement(reactChild, {
       className: "!p-0 rounded-xl".concat(
-        variant === "primary" ? " fancy-glass" : " fancy-glass-contrast"
+        variant === "primary" ? " fancy-glass" : " fancy-glass-contrast",
       ),
       minHeight: 0,
       innerClassName: "p-4 lg:p-10 m-0 lg:m-0 h-full".concat(
         variant === "primary"
           ? " bg-primary-100/20 dark:bg-primary-900/10"
-          : " bg-secondary-100/20 dark:bg-secondary-900/10"
+          : " bg-secondary-100/20 dark:bg-secondary-900/10",
       ),
       ...(reactChildType === LandingProductFeature
         ? { imagePosition: "center", imageShadow: "none" }
@@ -71,14 +71,14 @@ export const LandingProductFeaturesGrid = ({
         withBackground && variant === "secondary"
           ? "bg-secondary-100/20 dark:bg-secondary-900/10"
           : "",
-        className
+        className,
       )}
     >
       {title || description || titleComponent || descriptionComponent ? (
         <div
           className={clsx(
             "relative flex flex-col sm:items-center",
-            `${containerType}-container`
+            `${containerType}-container`,
           )}
         >
           {title ? (
@@ -100,7 +100,7 @@ export const LandingProductFeaturesGrid = ({
       <div
         className={clsx(
           "!p-0 relative isolate grid md:grid-cols-2 lg:grid-cols-4 gap-4",
-          `${containerType}-container`
+          `${containerType}-container`,
         )}
       >
         {childrenWithBackground}

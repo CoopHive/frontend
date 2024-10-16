@@ -1,5 +1,5 @@
-import React from 'react';
-import { clsx } from 'clsx';
+import { clsx } from "clsx";
+import type React from "react";
 
 /**
  * A component meant to be used in the landing page.
@@ -16,7 +16,7 @@ export const LandingBandSection = ({
   descriptionComponent,
   supportingComponent,
   withBackground = true,
-  variant = 'primary',
+  variant = "primary",
 }: {
   children?: React.ReactNode;
   className?: string;
@@ -26,26 +26,26 @@ export const LandingBandSection = ({
   descriptionComponent?: React.ReactNode;
   supportingComponent?: React.ReactNode;
   withBackground?: boolean;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
 }) => {
   return (
     <section
       className={clsx(
-        'w-full flex items-center justify-center p-2 md:p-6 gap-6',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-100/60'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-100/60'
-          : '',
+        "w-full flex items-center justify-center p-2 md:p-6 gap-6",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-100/60"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-100/60"
+          : "",
         className,
       )}
     >
       <div className="w-full p-6 max-w-full container-wide gap-6 items-center lg:flex lg:flex-row">
         <div
           className={clsx(
-            'w-full lg:w-auto flex flex-col flex-shrink-0 max-w-lg xl:max-w-3xl',
-            withBackground ? 'text-black' : '',
+            "w-full lg:w-auto flex flex-col flex-shrink-0 max-w-lg xl:max-w-3xl",
+            withBackground ? "text-black" : "",
           )}
         >
           {title ? (
@@ -67,8 +67,8 @@ export const LandingBandSection = ({
 
         <div
           className={clsx(
-            'flex gap-8 lg:gap-12 ml-auto mt-12 lg:mt-0 lg:max-w-lg xl:max-w-none flex-shrink',
-            withBackground ? 'text-black' : '',
+            "flex gap-8 lg:gap-12 ml-auto mt-12 lg:mt-0 lg:max-w-lg xl:max-w-none flex-shrink",
+            withBackground ? "text-black" : "",
             className,
           )}
         >

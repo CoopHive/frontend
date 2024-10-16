@@ -99,8 +99,8 @@
   }
 
   /**
-   * Perspective (used for images etc.)
-   */
+	 * Perspective (used for images etc.)
+	 */
   .perspective-none {
     transform: none;
   }
@@ -139,8 +139,8 @@
   }
 
   /**
-   * Custom shadows
-   */
+	 * Custom shadows
+	 */
   .hard-shadow {
     box-shadow: var(--hard-shadow);
   }
@@ -150,8 +150,8 @@
   }
 
   /**
-   * Container utilities
-   */
+	 * Container utilities
+	 */
   .container-narrow {
     @apply max-w-4xl;
   }

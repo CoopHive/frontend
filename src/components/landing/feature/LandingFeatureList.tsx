@@ -1,6 +1,6 @@
-import { clsx } from 'clsx';
-import { LandingFeature } from '@/components/landing/feature/LandingFeature';
-import { GlowBg } from '@/components/shared/ui/glow-bg';
+import { LandingFeature } from "@/components/landing/feature/LandingFeature";
+import { GlowBg } from "@/components/shared/ui/glow-bg";
+import { clsx } from "clsx";
 
 export interface FeatureListItem {
   title: string;
@@ -23,8 +23,8 @@ export const LandingFeatureList = ({
   featureItems,
   withBackground = false,
   withBackgroundGlow = false,
-  variant = 'primary',
-  backgroundGlowVariant = 'primary',
+  variant = "primary",
+  backgroundGlowVariant = "primary",
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -34,34 +34,34 @@ export const LandingFeatureList = ({
   featureItems: FeatureListItem[];
   withBackground?: boolean;
   withBackgroundGlow?: boolean;
-  variant?: 'primary' | 'secondary';
-  backgroundGlowVariant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
+  backgroundGlowVariant?: "primary" | "secondary";
 }) => {
   return (
     <section
       className={clsx(
-        'relative w-full flex justify-center items-center gap-8 py-12 lg:py-16 flex-col',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-900/10'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-900/10'
-          : '',
-        withBackgroundGlow ? 'overflow-hidden' : '',
+        "relative w-full flex justify-center items-center gap-8 py-12 lg:py-16 flex-col",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-900/10"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-900/10"
+          : "",
+        withBackgroundGlow ? "overflow-hidden" : "",
         className,
       )}
     >
       {withBackgroundGlow ? (
         <div className="hidden lg:flex justify-center w-full h-full absolute -bottom-1/2">
           <GlowBg
-            className={clsx('w-full lg:w-2/3 h-auto z-0')}
+            className={clsx("w-full lg:w-2/3 h-auto z-0")}
             variant={backgroundGlowVariant}
           />
         </div>
       ) : null}
 
       <div
-        className={clsx('w-full p-6 max-w-full container-wide relative z-10')}
+        className={clsx("w-full p-6 max-w-full container-wide relative z-10")}
       >
         {title ? (
           <h2 className="text-3xl font-semibold leading-tight max-w-xs sm:max-w-none md:text-4xl lg:text-5xl fancyHeading">

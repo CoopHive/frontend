@@ -1,8 +1,8 @@
-import clsx from 'clsx';
 import {
   LandingTestimonial,
-  TestimonialItem,
-} from '@/components/landing/testimonial/LandingTestimonial';
+  type TestimonialItem,
+} from "@/components/landing/testimonial/LandingTestimonial";
+import clsx from "clsx";
 
 /**
  * Shows a list of testimonials with a title and description.
@@ -16,9 +16,9 @@ export const LandingTestimonialListSection = ({
   descriptionComponent,
   testimonialItems,
   withBackground = false,
-  variant = 'primary',
+  variant = "primary",
   withBackgroundGlow = false,
-  backgroundGlowVariant = 'primary',
+  backgroundGlowVariant = "primary",
 }: {
   className?: string;
   containerClassName?: string;
@@ -28,21 +28,21 @@ export const LandingTestimonialListSection = ({
   descriptionComponent?: React.ReactNode;
   testimonialItems: TestimonialItem[];
   withBackground?: boolean;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
   withBackgroundGlow?: boolean;
-  backgroundGlowVariant?: 'primary' | 'secondary';
+  backgroundGlowVariant?: "primary" | "secondary";
 }) => {
   return (
     <section
       className={clsx(
-        'w-full flex justify-center items-center py-12 lg:py-16 flex-col relative isolate',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-900/10'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-900/10'
-          : '',
-        withBackgroundGlow ? 'overflow-hidden' : '',
+        "w-full flex justify-center items-center py-12 lg:py-16 flex-col relative isolate",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-900/10"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-900/10"
+          : "",
+        withBackgroundGlow ? "overflow-hidden" : "",
         className,
       )}
     >
@@ -70,17 +70,17 @@ export const LandingTestimonialListSection = ({
           >
             <div
               className={clsx(
-                'ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr',
-                backgroundGlowVariant === 'primary'
-                  ? 'from-primary-100 to-primary-200'
-                  : '',
-                backgroundGlowVariant === 'secondary'
-                  ? 'from-secondary-100 to-secondary-200'
-                  : '',
+                "ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr",
+                backgroundGlowVariant === "primary"
+                  ? "from-primary-100 to-primary-200"
+                  : "",
+                backgroundGlowVariant === "secondary"
+                  ? "from-secondary-100 to-secondary-200"
+                  : "",
               )}
               style={{
                 clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
               }}
             />
           </div>
@@ -90,17 +90,17 @@ export const LandingTestimonialListSection = ({
           >
             <div
               className={clsx(
-                'ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr xl:ml-0 xl:mr-[calc(50%-12rem)]',
-                backgroundGlowVariant === 'primary'
-                  ? 'from-primary-100 to-primary-200'
-                  : '',
-                backgroundGlowVariant === 'secondary'
-                  ? 'from-secondary-100 to-secondary-200'
-                  : '',
+                "ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr xl:ml-0 xl:mr-[calc(50%-12rem)]",
+                backgroundGlowVariant === "primary"
+                  ? "from-primary-100 to-primary-200"
+                  : "",
+                backgroundGlowVariant === "secondary"
+                  ? "from-secondary-100 to-secondary-200"
+                  : "",
               )}
               style={{
                 clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
               }}
             />
           </div>
@@ -109,7 +109,7 @@ export const LandingTestimonialListSection = ({
 
       <section
         className={clsx(
-          'w-full p-6 max-w-full container-wide relative grid grid-cols-12 gap-8 items-stretch',
+          "w-full p-6 max-w-full container-wide relative grid grid-cols-12 gap-8 items-stretch",
           containerClassName,
         )}
       >
@@ -123,10 +123,10 @@ export const LandingTestimonialListSection = ({
             url={testimonialItem.url}
             featured={testimonialItem.featured}
             className={clsx(
-              'col-span-12',
-              testimonialItem.size === 'full' ? 'md:col-span-12' : '',
-              testimonialItem.size === 'half' ? 'md:col-span-6' : '',
-              testimonialItem.size === 'third' ? 'md:col-span-4' : '',
+              "col-span-12",
+              testimonialItem.size === "full" ? "md:col-span-12" : "",
+              testimonialItem.size === "half" ? "md:col-span-6" : "",
+              testimonialItem.size === "third" ? "md:col-span-4" : "",
             )}
           />
         ))}

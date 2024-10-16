@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
-import { GlowBg } from '@/components/shared/ui/glow-bg';
+import { GlowBg } from "@/components/shared/ui/glow-bg";
+import { clsx } from "clsx";
 
 export interface FaqItem {
   question: string;
@@ -19,8 +19,8 @@ export const LandingFaqSection = ({
   faqItems,
   withBackground = false,
   withBackgroundGlow = false,
-  variant = 'primary',
-  backgroundGlowVariant = 'primary',
+  variant = "primary",
+  backgroundGlowVariant = "primary",
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -30,33 +30,33 @@ export const LandingFaqSection = ({
   faqItems: FaqItem[];
   withBackground?: boolean;
   withBackgroundGlow?: boolean;
-  variant?: 'primary' | 'secondary';
-  backgroundGlowVariant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
+  backgroundGlowVariant?: "primary" | "secondary";
 }) => {
   return (
     <section
       className={clsx(
-        'relative w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16',
-        withBackground && variant === 'primary'
-          ? 'bg-primary-100/20 dark:bg-primary-900/10'
-          : '',
-        withBackground && variant === 'secondary'
-          ? 'bg-secondary-100/20 dark:bg-secondary-900/10'
-          : '',
-        withBackgroundGlow ? 'overflow-hidden' : '',
+        "relative w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16",
+        withBackground && variant === "primary"
+          ? "bg-primary-100/20 dark:bg-primary-900/10"
+          : "",
+        withBackground && variant === "secondary"
+          ? "bg-secondary-100/20 dark:bg-secondary-900/10"
+          : "",
+        withBackgroundGlow ? "overflow-hidden" : "",
         className,
       )}
     >
       {withBackgroundGlow ? (
         <div className="hidden lg:flex justify-center w-full h-full absolute -bottom-1/2 pointer-events-none">
           <GlowBg
-            className={clsx('w-full lg:w-2/3 h-auto z-0')}
+            className={clsx("w-full lg:w-2/3 h-auto z-0")}
             variant={backgroundGlowVariant}
           />
         </div>
       ) : null}
 
-      <div className={clsx(className, 'w-full p-6 max-w-full container-wide')}>
+      <div className={clsx(className, "w-full p-6 max-w-full container-wide")}>
         {title ? (
           <h2 className="text-3xl font-semibold leading-tight max-w-xs sm:max-w-none md:text-4xl lg:text-5xl fancyHeading">
             {title}
@@ -73,7 +73,7 @@ export const LandingFaqSection = ({
 
         <ul
           className={clsx(
-            'grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mt-12 lg:mt-16 faq',
+            "grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mt-12 lg:mt-16 faq",
             className,
           )}
         >

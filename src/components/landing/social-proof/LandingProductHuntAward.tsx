@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 const getFormattedPlaceFromNumber = (place: number) => {
   if (place % 10 === 1) return `${place}st`;
@@ -17,8 +17,8 @@ export const LandingProductHuntAward = ({
   className,
   place = 1,
   subtitle,
-  title = 'Product of the Day',
-  size = 'default',
+  title = "Product of the Day",
+  size = "default",
   grayscale = true,
   textContainerClassName,
   titleClassName,
@@ -29,13 +29,13 @@ export const LandingProductHuntAward = ({
   place?: number | string;
   subtitle?: string;
   title?: string;
-  size?: 'default' | 'small';
+  size?: "default" | "small";
   grayscale?: boolean;
   textContainerClassName?: string;
   titleClassName?: string;
   placeClassName?: string;
 }) => {
-  const placeIsNumber = typeof place === 'number';
+  const placeIsNumber = typeof place === "number";
   const formattedPlace = placeIsNumber
     ? getFormattedPlaceFromNumber(place)
     : place;
@@ -44,19 +44,19 @@ export const LandingProductHuntAward = ({
     <div
       className={clsx(
         className,
-        'flex h-12 dark:invert',
-        !grayscale && place === 1 && 'text-yellow-500 dark:text-yellow-500',
-        !grayscale && place === 2 && 'text-gray-400 dark:text-gray-300',
-        !grayscale && place === 3 && 'text-amber-600 dark:text-amber-600',
-        grayscale || (placeIsNumber && place > 3) ? 'text-[#4B587C]' : '',
+        "flex h-12 dark:invert",
+        !grayscale && place === 1 && "text-yellow-500 dark:text-yellow-500",
+        !grayscale && place === 2 && "text-gray-400 dark:text-gray-300",
+        !grayscale && place === 3 && "text-amber-600 dark:text-amber-600",
+        grayscale || (placeIsNumber && place > 3) ? "text-[#4B587C]" : "",
       )}
     >
       <div
         className={clsx(
           innerClassName,
-          'relative flex',
-          size === 'small' && 'h-9',
-          size === 'default' && 'h-10',
+          "relative flex",
+          size === "small" && "h-9",
+          size === "default" && "h-10",
         )}
       >
         <svg
@@ -64,9 +64,9 @@ export const LandingProductHuntAward = ({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1241 1996"
           className={clsx(
-            'relative',
-            size === 'default' && 'h-11 -mt-1',
-            size === 'small' && 'h-9  -mt-0.5',
+            "relative",
+            size === "default" && "h-11 -mt-1",
+            size === "small" && "h-9  -mt-0.5",
           )}
         >
           <g clipPath="url(#a)">
@@ -84,27 +84,27 @@ export const LandingProductHuntAward = ({
 
         <div
           className={clsx(
-            '-mx-1 h-full flex flex-col justify-between items-center font-sans',
+            "-mx-1 h-full flex flex-col justify-between items-center font-sans",
             textContainerClassName,
-            size === 'default' && 'py-0.5',
+            size === "default" && "py-0.5",
           )}
         >
           <span
             className={clsx(
-              'font-bold text-current',
+              "font-bold text-current",
               titleClassName,
-              size === 'default' && 'text-[10px]',
-              size === 'small' && 'text-[9px]',
+              size === "default" && "text-[10px]",
+              size === "small" && "text-[9px]",
             )}
           >
             {title}
           </span>
           <span
             className={clsx(
-              'font-bold text-current',
+              "font-bold text-current",
               placeClassName,
-              size === 'default' && 'text-[16px]',
-              size === 'small' && 'text-[14px]',
+              size === "default" && "text-[16px]",
+              size === "small" && "text-[14px]",
             )}
           >
             {subtitle || formattedPlace}
@@ -116,9 +116,9 @@ export const LandingProductHuntAward = ({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1241 1996"
           className={clsx(
-            'relative',
-            size === 'default' && 'h-11 -mt-1',
-            size === 'small' && 'h-9  -mt-0.5',
+            "relative",
+            size === "default" && "h-11 -mt-1",
+            size === "small" && "h-9  -mt-0.5",
           )}
         >
           <g clipPath="url(#a)" fill="currentColor">

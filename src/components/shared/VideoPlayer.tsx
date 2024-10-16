@@ -1,20 +1,20 @@
-'use client';
-import { useRef, useState } from 'react';
-import { CircleIcon, PlayIcon } from 'lucide-react';
-import clsx from 'clsx';
+"use client";
+import clsx from "clsx";
+import { CircleIcon, PlayIcon } from "lucide-react";
+import { useRef, useState } from "react";
 
 export const VideoPlayer = ({
   autoPlay = true,
   controls = true,
   muted = true,
-  maxWidth = '700px',
+  maxWidth = "700px",
   poster,
   src,
   width,
   height,
   loop,
-  preload = 'metadata',
-  variant = 'primary',
+  preload = "metadata",
+  variant = "primary",
   className,
 }: {
   autoPlay?: boolean;
@@ -26,8 +26,8 @@ export const VideoPlayer = ({
   width?: string;
   height?: string;
   loop?: boolean;
-  preload?: 'none' | 'metadata' | 'auto';
-  variant?: 'primary' | 'secondary';
+  preload?: "none" | "metadata" | "auto";
+  variant?: "primary" | "secondary";
   className?: string;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -42,10 +42,10 @@ export const VideoPlayer = ({
       setIsPlaying(true);
       videoRef.current.play();
 
-      const shouldLoop = typeof loop === 'boolean' ? loop : true;
+      const shouldLoop = typeof loop === "boolean" ? loop : true;
 
       if (shouldLoop) {
-        videoRef.current.setAttribute('loop', '');
+        videoRef.current.setAttribute("loop", "");
       }
     }
   };
@@ -53,35 +53,35 @@ export const VideoPlayer = ({
   return (
     <div
       style={{ maxWidth }}
-      className={clsx(className, 'rounded-lg overflow-hidden shadow-md')}
+      className={clsx(className, "rounded-lg overflow-hidden shadow-md")}
     >
       <div className="relative bg-white dark:bg-black rounded-md">
         {!isPlaying ? (
           <button
             onClick={togglePlay}
             className={clsx(
-              'w-full h-full flex items-center justify-center absolute inset-0 bg-gradient-to-r group',
-              variant === 'primary'
-                ? 'from-primary-900/30 to-black/70'
-                : 'from-secondary-900/40 to-black/70',
+              "w-full h-full flex items-center justify-center absolute inset-0 bg-gradient-to-r group",
+              variant === "primary"
+                ? "from-primary-900/30 to-black/70"
+                : "from-secondary-900/40 to-black/70",
             )}
           >
             <div className="relative w-28 h-28">
               <PlayIcon
                 className={clsx(
-                  'absolute top-0 left-0 z-10 inset-0 w-28 h-28 group-hover:scale-95 transition-transform',
-                  variant === 'primary'
-                    ? 'stroke-primary-200/50 fill-primary-200'
-                    : 'stroke-secondary-200/50 fill-secondary-200',
+                  "absolute top-0 left-0 z-10 inset-0 w-28 h-28 group-hover:scale-95 transition-transform",
+                  variant === "primary"
+                    ? "stroke-primary-200/50 fill-primary-200"
+                    : "stroke-secondary-200/50 fill-secondary-200",
                 )}
               />
 
               <CircleIcon
                 className={clsx(
-                  'stroke-[1px] absolute top-0 left-0 z-0 w-28 h-28 scale-150 origin-center',
-                  variant === 'primary'
-                    ? 'stroke-primary-200/50 group-hover:stroke-primary-200/90'
-                    : 'stroke-secondary-200/50 group-hover:stroke-secondary-200/90',
+                  "stroke-[1px] absolute top-0 left-0 z-0 w-28 h-28 scale-150 origin-center",
+                  variant === "primary"
+                    ? "stroke-primary-200/50 group-hover:stroke-primary-200/90"
+                    : "stroke-secondary-200/50 group-hover:stroke-secondary-200/90",
                 )}
               />
             </div>

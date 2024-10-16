@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 /**
  * Highlights important features, milestones or testimonials of your product.
@@ -17,19 +17,19 @@ export const LandingSocialProofBand = ({
   return (
     <div
       className={clsx(
-        'w-full py-2',
+        "w-full py-2",
         invert
-          ? 'bg-slate-700 dark:bg-slate-300'
-          : 'bg-slate-200 dark:bg-slate-900',
+          ? "bg-slate-700 dark:bg-slate-300"
+          : "bg-slate-200 dark:bg-slate-900",
         className,
       )}
     >
       <div
         className={clsx(
-          'max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-8 px-8',
+          "max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-8 px-8",
           invert
-            ? 'text-gray-300 dark:text-gray-600'
-            : 'text-gray-700 dark:text-gray-200',
+            ? "text-gray-300 dark:text-gray-600"
+            : "text-gray-700 dark:text-gray-200",
         )}
       >
         {children}

@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import { StarHalfIcon, StarIcon } from 'lucide-react';
+import clsx from "clsx";
+import { StarHalfIcon, StarIcon } from "lucide-react";
 
 /**
  * Shows a rating with stars.
@@ -8,26 +8,23 @@ export const LandingRating = ({
   className,
   rating = 5,
   maxRating = 5,
-  size = 'medium',
+  size = "medium",
 }: {
   className?: string;
   rating?: number;
   maxRating?: number;
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
 }) => {
   return (
-    <div
-      className={clsx('flex items-center gap-1', className)}
-      aria-description={`Rating: ${rating} out of ${maxRating}`}
-    >
+    <div className={clsx("flex items-center gap-1", className)}>
       {Array.from({ length: maxRating }).map((_, index) => {
         return (
           <div
             key={index}
             className={clsx(
-              size === 'small' ? 'h-3 w-3' : '',
-              size === 'medium' ? 'h-4 w-4' : '',
-              size === 'large' ? 'h-5 w-5' : '',
+              size === "small" ? "h-3 w-3" : "",
+              size === "medium" ? "h-4 w-4" : "",
+              size === "large" ? "h-5 w-5" : "",
             )}
           >
             {
@@ -49,9 +46,9 @@ export const LandingRating = ({
               ) : (
                 <StarIcon
                   key={index}
-                  className={clsx('w-full h-full', {
-                    'text-yellow-400 fill-yellow-400': index < rating,
-                    'text-gray-300 fill-gray-300': index >= rating,
+                  className={clsx("w-full h-full", {
+                    "text-yellow-400 fill-yellow-400": index < rating,
+                    "text-gray-300 fill-gray-300": index >= rating,
                   })}
                   aria-hidden="true"
                 />

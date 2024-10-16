@@ -1,6 +1,6 @@
-import clsx from "clsx";
 import Image from "@/components/shared/Image";
 import { GlowBg } from "@/components/shared/ui/glow-bg";
+import clsx from "clsx";
 
 /**
  * A component meant to be used in the landing page.
@@ -71,7 +71,7 @@ export const LandingProductFeature = ({
           ? "overflow-x-hidden"
           : "",
         imagePerspective === "paper" ? "md:pb-24" : "",
-        className
+        className,
       )}
     >
       <div
@@ -80,7 +80,7 @@ export const LandingProductFeature = ({
           imagePosition === "center"
             ? "container-narrow"
             : "max-w-full container-wide grid lg:grid-cols-2",
-          innerClassName
+          innerClassName,
         )}
         style={{
           minHeight,
@@ -92,7 +92,7 @@ export const LandingProductFeature = ({
             imagePosition === "left" && "lg:col-start-2 lg:row-start-1",
             textPosition === "center"
               ? "md:max-w-lg items-center text-center"
-              : "items-start"
+              : "items-start",
           )}
         >
           {title ? (
@@ -118,7 +118,7 @@ export const LandingProductFeature = ({
                   className={clsx(
                     "w-full lg:w-1/2 h-auto z-0 dark:opacity-50",
                     imagePosition === "center" ? "top-5" : " -top-1/3",
-                    imagePerspective === "paper" ? "opacity-70" : "opacity-100"
+                    imagePerspective === "paper" ? "opacity-70" : "opacity-100",
                   )}
                   variant={backgroundGlowVariant}
                 />
@@ -131,7 +131,7 @@ export const LandingProductFeature = ({
                   className={clsx(
                     "w-full rounded-md overflow-hidden",
                     imageShadow === "soft" && "shadow-md",
-                    imageShadow === "hard" && "hard-shadow"
+                    imageShadow === "hard" && "hard-shadow",
                   )}
                   src={imageSrc}
                   alt={imageAlt}
@@ -157,7 +157,7 @@ export const LandingProductFeature = ({
                     "lg:perspective-bottom-lg",
                   imagePerspective === "paper" &&
                     "lg:perspective-paper hover:scale-90",
-                  imagePerspective === "none" ? "my-4" : "my-8"
+                  imagePerspective === "none" ? "my-4" : "my-8",
                 )}
                 alt={imageAlt}
                 src={imageSrc}

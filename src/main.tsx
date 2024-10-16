@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
+import About from "./About";
 import Home from "./Home";
 import Navbar from "./components/navbar";
-import About from "./About";
 
 const router = createHashRouter([
   {
@@ -18,5 +18,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Navbar />
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
