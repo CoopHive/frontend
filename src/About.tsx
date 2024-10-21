@@ -9,7 +9,6 @@ import aayushi from "./assets/portraits/aayushi.jpeg";
 import levi from "./assets/portraits/levi.jpg";
 import matteo from "./assets/portraits/matteo.jpeg";
 import pratham from "./assets/portraits/pratham.jpeg";
-import taylor from "./assets/portraits/taylor.jpg";
 import vardhan from "./assets/portraits/vardhan.jpeg";
 import yang from "./assets/portraits/yang.jpg";
 
@@ -78,11 +77,6 @@ export default function About() {
           title="Yang Zheng - Architect"
           description="Prev mmon Co., Mana Finance Co., Matrix Inc.,"
           imageSrc={yang}
-        />
-        <LandingProductFeature
-          title="Taylor Hulsmans - Engineer"
-          description="Prev at Molecule, Sigmadex, HedgeTrade. OSS contributor @ IPFS, Filecoin, various DeSci projects"
-          imageSrc={taylor}
         />
         <LandingProductFeature
           title="Matteo Manzi - Researcher"
