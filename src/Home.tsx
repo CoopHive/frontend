@@ -160,11 +160,11 @@ export default function Home() {
           <p>
             CoopHive is currently in development. <br />
             <br />
-            You can test out a proof-of-concept of a distributed computing
-            network built on the previous version of the protocol{" "}
+            You can test out the latest proof-of-concept of a distributed computing
+            network built on top of the primitives{" "}
             <a
               className="hover:underline "
-              href="https://github.com/CoopHive/dcn"
+              href="https://github.com/CoopHive/Apiary"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -172,7 +172,7 @@ export default function Home() {
             </a>
             . <br />
             <br />
-            To try out the latest proof-of-concept,{" "}
+            To read all about the marketplace primitives, {" "}
             <a
               className="hover:underline"
               href="https://alkahest.coophive.network"
